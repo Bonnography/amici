@@ -1,5 +1,5 @@
 <?php
-namespace Jlc\JlcTemplate\DataProcessing;
+namespace Cbw\CbwTemplate\DataProcessing;
 
 /*
  * This file is part of the TYPO3 CMS project.

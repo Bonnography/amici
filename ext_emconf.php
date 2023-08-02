@@ -4,7 +4,7 @@
  * Extension Manager/Repository config file for ext "cb_template".
  */
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'JLC Template',
+    'title' => 'Cbw Template',
     'description' => 'Sitepackage for TYPO3 from CodeBomb-Websolutions',
     'category' => 'templates',
     'constraints' => [
@@ -16,7 +16,7 @@ $EM_CONF[$_EXTKEY] = [
     ],
     'autoload' => [
         'psr-4' => [
-            'Jlc\\JlcTemplate\\' => 'Classes',
+            'Cbw\\CbTemplate\\' => 'Classes',
         ],
     ],
     'state' => 'stable',

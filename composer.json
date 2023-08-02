@@ -21,8 +21,8 @@
     },
     "version": "dev-local",
     "autoload": {
-        "classmap": [
-            "*"
-        ]
+        "psr-4": {
+            "Cbw\\CbTemplate\\": "Classes/"
+        }
     }
 }

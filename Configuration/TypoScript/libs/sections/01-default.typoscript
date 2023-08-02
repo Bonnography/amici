@@ -14,7 +14,7 @@ page {
 
     includeJSFooter {
         default = EXT:cb_template/cb_template/Resources/Public/js/default-libs.min.js
-        Jlctemplate = EXT:cb_template/cb_template/Resources/Public/js/cb_template.min.js
+        Cbwtemplate = EXT:cb_template/cb_template/Resources/Public/js/cb_template.min.js
     }
 
 

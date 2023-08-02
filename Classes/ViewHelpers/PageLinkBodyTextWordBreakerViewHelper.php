@@ -1,6 +1,6 @@
 <?php
 
-namespace Jlc\JlcTemplate\ViewHelpers;
+namespace Cbw\CbwTemplate\ViewHelpers;
 
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Utility\GeneralUtility;

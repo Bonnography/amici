@@ -14,6 +14,6 @@ call_user_func(function()
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
         $extensionKey,
         'Configuration/TsConfig/Page/cb_template.tsconfig',
-        'Jlc Template'
+        'Cbw Template'
     );
 });

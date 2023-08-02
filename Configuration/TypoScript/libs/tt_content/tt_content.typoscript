@@ -71,7 +71,7 @@ tt_content {
         }
 
         dataProcessing {
-            10 = JLC\JlcTemplate\DataProcessing\ChildContentElementProcessor
+            10 = Cbw\CbwTemplate\DataProcessing\ChildContentElementProcessor
             10 {
                 references {
                     fieldName = cards_container
@@ -97,7 +97,7 @@ tt_content {
             10 = EXT:cb_template/Resources/Private/Layouts/ContentElements/
         }
 
-        dataProcessing.10 = Jlc\JlcTemplate\DataProcessing\ChildContentElementProcessor
+        dataProcessing.10 = Cbw\CbwTemplate\DataProcessing\ChildContentElementProcessor
         dataProcessing.10 {
             references {
                 table = tt_content
