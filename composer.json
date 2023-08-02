@@ -12,13 +12,13 @@
         }
     ],
     "require": {
-        "typo3/cms-core": "^11.5",
-        "typo3/cms-rte-ckeditor": "^11.5",
-        "typo3/cms-fluid-styled-content": "^11.5"
+        "typo3/cms-core": "^12.4",
+        "typo3/cms-rte-ckeditor": "^12.4",
+        "typo3/cms-fluid-styled-content": "^12.4"
     },
     "autoload": {
         "psr-4": {
-            "Jlc\\JlcTemplate\\": "Classes/"
+            "Cbw\\CbTemplate\\": "Classes/"
         }
     },
     "extra": {
