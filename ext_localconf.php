@@ -1,6 +1,6 @@
 <?php
 defined('TYPO3_MODE') || die();
-
+use TYPO3\CMS\Core\Http\ApplicationType;
 /***************
  * Add default RTE configuration
  */
@@ -13,7 +13,7 @@ $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['teaser'] = 'EXT:cb_template/Confi
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:cb_template/Configuration/TsConfig/Page/cb_template.tsconfig">');
 
 call_user_func(function () {
-    if (TYPO3_MODE === 'BE') {
+    if (ApplicationType::fromRequest($GLOBALS['TYPO3_REQUEST'])->isBackend()) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
             trim('
                 module.tx_form {
