@@ -1,0 +1,13 @@
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        teaserLink {
+            iconIdentifier = teaserLink
+            title = LLL:EXT:cb_template/Resources/Private/Language/locallang_tca.xlf:tt_content.teaserLink.wizard.title
+            description = LLL:EXT:cb_template/Resources/Private/Language/locallang_tca.xlf:tt_content.teaserLink.wizard.description
+            tt_content_defValues {
+                CType = teaserLink
+            }
+        }
+    }
+    show := addToList(teaserLink)
+}

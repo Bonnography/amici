@@ -1,0 +1,48 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+
+<f:section name="Main">
+    <f:if condition="{data.header}">
+        <f:then>
+            <f:render partial="Header/Header" arguments="{_all}"/>
+        </f:then>
+    </f:if>
+    <div class="row">
+        <div class="{f:render(partial:'Utility/SwitchTextMediaImagePosition', arguments:'{data: data, type: "media"}')}">
+        <f:render partial="Media/Textmedia-Image" arguments="{_all}"/>
+    </div>
+    <f:if condition="{data.bodytext}">
+        <f:switch expression="{data.imageorient}">
+            <f:case value="0">
+                <div class="col-12">
+                    <f:render section="bodytext" arguments="{_all}"/>
+                </div>
+            </f:case>
+            <f:case value="8">
+                <div class="col-12 order-1">
+                    <f:render section="bodytext" arguments="{_all}"/>
+                </div>
+            </f:case>
+            <f:case value="25">
+                <div class="col-12 col-md-8 order-md-1">
+                    <f:render section="bodytext" arguments="{_all}"/>
+                </div>
+            </f:case>
+            <f:case value="26">
+                <div class="col-12 col-md-6 order-md-2 d-md-flex align-items-md-center">
+                    <f:render section="bodytext" arguments="{_all}"/>
+                </div>
+            </f:case>
+        </f:switch>
+    </f:if>
+    </div>
+
+
+</f:section>
+
+<f:section name="bodytext">
+    <div class="bodytext">
+        <f:format.html parseFuncTSPath="lib.parseFunc_RTE"><f:spaceless>{data.bodytext}</f:spaceless></f:format.html>
+    </div>
+</f:section>
+</html>

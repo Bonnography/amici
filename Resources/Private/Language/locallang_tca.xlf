@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2013-03-05T08:00:00Z" product-name="cb_template">
+        <header/>
+        <body>
+            <trans-unit id="tt_content.cards.wizard.title">
+                <source>Cards Content - Element</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.wizard.description">
+                <source>Display Cards - 2 or 3 in a row</source>
+            </trans-unit>
+            <trans-unit id="tt_content.headerimage.wizard.title">
+                <source>Headerimage Content - Element</source>
+            </trans-unit>
+            <trans-unit id="tt_content.headerimage.wizard.description">
+                <source>Display Headerimage</source>
+            </trans-unit>
+            <trans-unit id="tt_content.teaserLink.wizard.title">
+                <source>Teaser Element</source>
+            </trans-unit>
+            <trans-unit id="tt_content.teaserLink.wizard.description">
+                <source>Display Teaser and link to Subpage</source>
+            </trans-unit>
+
+            <trans-unit id="tt_content.cardsitem_header">
+                <source>Card Header</source>
+            </trans-unit>
+            <trans-unit id="teaserItem">
+                <source>Teaser Item</source>
+            </trans-unit>
+            <trans-unit id="teaser_headline">
+                <source>Headline</source>
+            </trans-unit>
+            <trans-unit id="teaserItem_link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="tt_content.contact.wizard.title">
+                <source>Contact Element</source>
+            </trans-unit>
+            <trans-unit id="tt_content.contact.wizard.description">
+                <source>Show Contact Section with maps</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

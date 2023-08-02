@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="de" datatype="plaintext" original="messages" date="2021-04-19UTC13:21:430">
+        <header>
+            <authorName>Benjamin Bomberg</authorName>
+            <authorEmail>benjamin.bomberg@codebomb-websolutions.de</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="backend_layout.default">
+                <target>Default</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.normal">
+                <target>Normal</target>
+            </trans-unit>
+            <trans-unit id="tx_news.latestNews">
+                <target>Zeige die Letzten 3 News</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

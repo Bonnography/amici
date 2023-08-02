@@ -1,0 +1,13 @@
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        cards {
+            iconIdentifier = cards
+            title = LLL:EXT:cb_template/Resources/Private/Language/locallang_tca.xlf:tt_content.cards.wizard.title
+            description = LLL:EXT:cb_template/Resources/Private/Language/locallang_tca.xlf:tt_content.cards.wizard.description
+            tt_content_defValues {
+                CType = cards
+            }
+        }
+    }
+    show := addToList(cards)
+}

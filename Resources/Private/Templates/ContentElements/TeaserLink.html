@@ -1,0 +1,42 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+<f:section name="Main">
+
+    <f:if condition="{data.header}">
+        <f:then>
+            <div class="row text-center">
+                <div class="col-12">
+                    <f:render partial="Header/Header" arguments="{_all}"/>
+                </div>
+            </div>
+        </f:then>
+    </f:if>
+
+    <div class="row text-center justify-content-center">
+
+        <f:for each="{teaserItem}" as="item">
+            <div class="col-12 col-md-4">
+                <div class="card">
+                    <f:if condition="{item.teaserItem_link}">
+                        <f:then>
+                            <f:link.typolink parameter="{item.teaserItem_link}">
+                                <div class="image-container">
+                                    <f:for each="{item.images}" as="image">
+                                        <f:image image="{image}" class="img-fluid" alt="{image.alternative}"
+                                                 title="{image.title}"/>
+                                    </f:for>
+                                </div>
+                                <h4><strong>{item.teaser_headline}</strong></h4>
+                            </f:link.typolink>
+                        </f:then>
+                        <f:else>
+
+                        </f:else>
+                    </f:if>
+                </div>
+
+            </div>
+        </f:for>
+    </div>
+</f:section>
+</html>

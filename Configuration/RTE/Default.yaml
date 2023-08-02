@@ -1,0 +1,68 @@
+#load default config from ext
+imports:
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+editor:
+    config:
+        # A list of semicolon-separated style names (by default: tags) representing the style definition for each entry to be displayed in the Format drop-down list in the toolbar. Each entry must have a corresponding configuration in a setting named 'format_(tagName)'.
+        format_tags: "p;h3;h4"
+
+        # config labels anf formatting "styles" drop down
+        stylesSet:
+            # block level styles
+            - { name: "Absatz", element: "p" }
+            - { name: "Headline H3", element: "h3" }
+            - { name: "Headline H4", element: "h4" }
+            - { name: "Headline H5", element: "h5" }
+            - { name: "Mobil Ausblenden", element: "p", attributes: {class: "d-lg-block d-none"} }
+            - { name: "Mehr Abstand", element: "p", attributes: {class: "mb-4"} }
+            - { name: "Sales Standorte List", element: "li", attributes: {class: "fieldSales"} }
+            - { name: "Contact Center List", element: "li", attributes: {class: "contactCenter"} }
+            - { name: "CookieErklärung", element: "script", attributes: {id: "Cookiedeclaration", src: "https://consent.cookiebot.com/aeb7eb25-870d-49b2-8bf0-5d9f513d5f66/cd.js", type: "text/javascript", async: "true"}}
+            # inline styles
+            - { name: "Inline Mobil Ausblenden", element: "span", attributes: {class: "d-none d-lg-inline"} }
+        # toolbar config
+        # configurator: https://ckeditor.com/latest/samples/toolbarconfigurator/index.html#basic
+        toolbarGroups:
+            - { name: 'document', groups: [ 'mode', 'document', 'doctools' ] }
+            - { name: 'clipboard', groups: [ 'clipboard', 'undo' ] }
+            - { name: 'editing', groups: [ 'find', 'selection', 'spellchecker', 'editing' ] }
+            - { name: 'forms', groups: [ 'forms' ] }
+            - '/'
+            - { name: 'colors', groups: [ 'basicstyles' ]}
+            - { name: 'basicstyles', groups: [ 'basicstyles', 'colors', 'cleanup' ] }
+            - { name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi', 'paragraph' ] }
+            - { name: 'links', groups: [ 'links' ] }
+            - { name: 'insert', groups: [ 'insert', 'insertcharacters' ] }
+            - '/'
+            - { name: 'styles', groups: [ 'styles' ] }
+            - { name: 'tools', groups: [ 'tools' ] }
+            - { name: 'others', groups: [ 'others' ] }
+            - { name: 'about', groups: [ 'about' ] }
+
+        colorButton_enableAutomatic: false
+        colorButton_enableMore: false
+        colorButton_colors: ff5a10,000000,08204a
+        removeButtons: 'Save,NewPage,Preview,Print,Templates,Form,Checkbox,Radio,TextField,Textarea,Select,Button,ImageButton,HiddenField,Strike,Outdent,Indent,CreateDiv,BidiLtr,BidiRtl,Language,Anchor,Image,Flash,HorizontalRule,Smiley,PageBreak,Iframe,Format,FontSize,Font,BGColor,Maximize,About'
+
+        # style configs (css files)
+        contentsCss: "EXT:rte_ckeditor/Resources/Public/Css/contents.css"
+        #    contentsCss: ["EXT:rte_ckeditor/Resources/Public/Css/contents.css", "EXT:template_site/Resources/Public/Styles/Rte.css"]
+        removePlugins:
+            - image
+        extraPlugins:
+            - justify
+            - specialchar
+            - copyformatting
+            - showblocks
+            - colorbutton
+        justifyClasses:
+            - text-left
+            - text-center
+            - text-right
+            - text-justify
+        externalPlugins:
+            - typo3link: { resource: "EXT:rte_ckeditor/Resources/Public/JavaScript/Plugins/typo3link.js" }
+            - softhyphen: { resource: "EXT:rte_ckeditor/Resources/Public/JavaScript/Plugins/softhyphen/", enableShortcut: true}

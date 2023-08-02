@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="de" datatype="plaintext" original="messages" date="2013-03-05T08:00:00Z" product-name="template">
+        <header/>
+        <body>
+            <trans-unit id="element.privacy.properties.value">
+                <target>Ich habe die <![CDATA[<a target="_blank" rel="noopener" href="https://codebomb-websolutions.de/datenschutz">Datenschutzerklärung</a> gelesen und stimme ihrem Inhalt zu. *]]></target>
+            </trans-unit>
+            <trans-unit id="element.privacy.properties.label">
+                <target>Ich habe die <![CDATA[<a target="_blank" rel="noopener" href="https://codebomb-websolutions.de/datenschutz">Datenschutzerklärung</a> gelesen und stimme ihrem Inhalt zu. *]]></target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

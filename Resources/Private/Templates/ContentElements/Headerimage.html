@@ -1,0 +1,31 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+<f:section name="Main">
+
+        <div class="headerimage-headline">
+            <f:if condition="{data.header}">
+                <f:render partial="Header/Header" arguments="{_all}"/>
+            </f:if>
+        </div>
+        <div class="headerimage-image">
+            <f:for each="{images}" as="image">
+               <picture>
+                    <source
+                            media="(max-width: 768px)"
+                            srcset="{f:uri.image(image: image, maxWidth: 768, treatIdAsReference:1, fileExtension: 'png')}" type="image/png"/>
+                    <source
+                            media="(max-width: 768px)"
+                            srcset="{f:uri.image(image: image, maxWidth: 768, treatIdAsReference:1, fileExtension: 'jpg')}" type="image/jpeg"/>
+                    <source
+                            media="(max-width: 1920px)"
+                            srcset="{f:uri.image(image: image, maxWidth: 1910, treatIdAsReference:1, fileExtension: 'png')}" type="image/png"/>
+                    <source
+                            media="(max-width: 1920px)"
+                            srcset="{f:uri.image(image: image, maxWidth: 1910, treatIdAsReference:1, fileExtension: 'jpg')}" type="image/jpeg"/>
+                    <f:image image="{image}" class="img-fluid" alt="{image.alternative}" title="{image.title}" />
+                </picture>
+            </f:for>
+        </div>
+
+</f:section>
+</html>

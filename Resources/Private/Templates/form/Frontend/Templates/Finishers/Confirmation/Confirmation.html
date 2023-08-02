@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers" data-namespace-typo3-fluid="true">
+<div id="{form.identifier}">
+    <h3>Vielen Dank für deine Nachricht</h3>
+    <p>Folgende Daten wurden erfolgreich übermittelt:</p>
+    <p><strong>Ansprechpartner</strong></p>
+    <p>{form.formState.formValues.gender} {form.formState.formValues.firstname} {form.formState.formValues.lastname}
+        <f:if condition="{form.formState.formValues.company}"><br>{form.formState.formValues.company}</f:if>
+        <f:if condition="{form.formState.formValues.email}"><br>{form.formState.formValues.email}</f:if>
+        <f:if condition="{form.formState.formValues.telephone}"><br>Tel.: {form.formState.formValues.telephone}</f:if>
+    </p>
+
+    <f:if condition="{form.formState.formValues.message}">
+        <p><strong>Deine Mitteilung</strong></p>
+        <p>{form.formState.formValues.message}</p>
+    </f:if>
+
+    <formvh:renderAllFormValues renderable="{form.formDefinition}" as="formValue">
+        <f:if condition="{formValue.element.identifier} == 'consent-declaration'">
+            <f:if condition="{form.formState.formValues.consent-declaration} == 0">
+                <f:then><p><strong>Einwilligungserklärung:</strong> nein</p></f:then>
+                <f:else><p><strong>Einwilligungserklärung:</strong> <f:format.html>{formvh:translateElementProperty(element: formValue.element, property: 'label')}</f:format.html></p></f:else>
+            </f:if>
+        </f:if>
+    </formvh:renderAllFormValues>
+</div>
+</html>

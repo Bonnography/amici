@@ -1,0 +1,57 @@
+## loading default constants for the website
+
+company {
+    # cat=basic/SocialMedia/40; type=string; label=Favicon
+    favicon = EXT:cb_template/cb_template/Resources/Public/images/favicon.jpg
+    # cat=basic/SocialMedia/50; type=string; label=Favicon
+    apple-touch-72 = EXT:cb_template/cb_template/Resources/Public/images/apple-touch-icon-72x72.png
+    # cat=basic/SocialMedia/60; type=string; label=Favicon
+    apple-touch-114 = EXT:cb_template/cb_template/Resources/Public/images/apple-touch-icon-114x114.png
+    # cat=basic/SocialMedia/70; type=string; label=Favicon
+    apple-touch-144 = EXT:cb_template/cb_template/Resources/Public/images/apple-touch-icon-144x144.png
+    # cat=basic/SocialMedia/80; type=string; label=Favicon
+    mstile = EXT:cb_template/cb_template/Resources/Public/images/mstile-150x150.png
+}
+
+page {
+    # cat=basic/Page/10; type=int+; label=Speicherplatz Jobs
+    data.jobs = 23
+    # cat=basic/Page/20; type=int+; label=Speicherplatz Job Ajax
+    data.ajax_page.typeNum = 545443
+    # cat=basic/Page/30; type=int+; label=Impressumsseite
+    imprint = 8
+    # cat=basic/Page/40; type=int+; label=Datenschutz
+    privacy = 9
+    # cat=basic/Page/50; type=int+; label=Kontaktseite
+    contact = 7
+    # cat=basic/Page/90; type=int+; label=stores
+    data.locationer = 32
+    # cat=basic/Page/100; type=int+; label=contactperson
+    data.contactperson = 25
+    # cat=basic/Page/130; type=int+; label=news
+    data.news_list_back = 6
+    # cat=basic/Page/140; type=int+; label=news
+    news = 6
+    # cat=basic/Page/150; type=int+; label=search
+    search = 44
+    # cat=basic/Page/160; type=int+; label=companyPageUid
+    companyPageUid = 4
+    # cat=basic/Page/170; type=int+; label=careerPageUid
+    careerPageUid = 5
+    # cat=basic/Page/180; type=int+; label=careerPageUid
+    jobsPageUid = 31
+    # cat=basic/Page/190; type=int+; label=careerStarters
+    careerStartersUid = 30
+    # cat=basic/Page/200; type=int+; label=careerProfessionals
+    careerProfessionalsUid = 34
+    # cat=basic/Page/210; type=int+; label=careerManagement
+    careerManagementUid = 28
+    # cat=basic/Page/220; type=int+; label=pageDataNews
+    data.news = 20
+}
+
+seo {
+    GTM =
+}
+
+language.file = EXT:cb_template/Resources/Private/Language/locallang.xlf

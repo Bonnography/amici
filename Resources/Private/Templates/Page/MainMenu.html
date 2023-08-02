@@ -1,0 +1,34 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+
+    <f:if condition="{menu}">
+        <nav id="menu-main">
+            <ul class="menu-main__list">
+                <f:for each="{menu}" as="page">
+                    <f:if condition="{page.content}">
+                        <f:for each="{page.content}" as="element" iteration="iterator">
+                            <f:if condition="{element.data.header}">
+                                <li class="menu-main_item lvl1 ">
+                                    <a class="menu-main_item__link lvl1 {f:if(condition: '{iterator.isFirst}', then: 'active')}" href="{page.link}#c{element.data.uid}"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{element.data.header}">
+                                    <f:if condition="{iterator.isFirst}">
+                                        <f:then>
+                                            Startseite
+                                        </f:then>
+                                        <f:else>
+                                            <span>{element.data.header}</span>
+                                        </f:else>
+                                    </f:if>
+
+                                    </a>
+                                </li>
+                            </f:if>
+                        </f:for>
+                    </f:if>
+                </f:for>
+            </ul>
+        </nav>
+    </f:if>
+
+</f:section>
+</html>

@@ -1,0 +1,29 @@
+{
+    "name": "cbw/cb_template",
+    "type": "typo3-cms-extension",
+    "description": "Sitepackage for TYPO3 CodeBomb-Websolutions",
+    "homepage": "https://www.codebomb-websolutions.de",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "authors": [
+        {
+            "name": "Benjamin Bomberg",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^11.5",
+        "typo3/cms-rte-ckeditor": "^11.5",
+        "typo3/cms-fluid-styled-content": "^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jlc\\JlcTemplate\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "cb_template"
+        }
+    }
+}

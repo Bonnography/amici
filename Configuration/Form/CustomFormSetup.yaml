@@ -1,0 +1,21 @@
+TYPO3:
+  CMS:
+    Form:
+      persistenceManager:
+        allowedFileMounts:
+          10: EXT:cb_template/Resources/Private/Templates/form/Forms/
+        # Path to save created formulars
+        allowedExtensionPaths:
+          10: EXT:cb_template/Resources/Private/Templates/form/Forms/
+        # allow saving formular from backend
+        allowSaveToExtensionPaths: true
+        # allow deleating formular from backend
+        allowDeleteFromExtensionPaths: true
+
+      prototypes:
+        standard:
+          finishersDefinition:
+            Confirmation:
+              options:
+                templateRootPaths:
+                  20: 'EXT:cb_template/Resources/Private/Templates/form/Frontend/Templates/Finishers/Confirmation'

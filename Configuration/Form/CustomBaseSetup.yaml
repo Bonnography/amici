@@ -1,0 +1,19 @@
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                templateRootPaths:
+                  100: 'EXT:cb_template/Resources/Private/Templates/form/Frontend/Templates/'
+                partialRootPaths:
+                  100: 'EXT:cb_template/Resources/Private/Templates/form/Frontend/Partials/'
+                layoutRootPaths:
+                  100: 'EXT:cb_template/Resources/Private/Templates/form/Frontend/Layouts/'
+                translation:
+                  translationFiles:
+                    # default translation files for the frontend
+                    10: 'EXT:form/Resources/Private/Language/locallang.xlf'
+                    20: 'EXT:cb_template/Resources/Private/Language/locallang.xlf'

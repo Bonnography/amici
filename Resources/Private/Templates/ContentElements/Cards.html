@@ -1,0 +1,94 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+<f:section name="Main">
+
+        <f:if condition="{data.header}">
+            <f:then>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <f:render partial="Header/Header" arguments="{_all}"/>
+                        <p><f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.subheader}</f:format.html></p>
+                    </div>
+                </div>
+            </f:then>
+        </f:if>
+    <div class="row{f:if(condition: '{data.card_layout} == 1', then: ' featured-bg', else: '')}">
+        <f:if condition="{data.card_layout} == 1">
+            <f:then>
+                <f:for each="{cards}" as="card" iteration="i">
+
+                    <div class="col-lg-6 col-md-6 col-xs-12 opacity-zero">
+                        <div class="feature-item element-{i.cycle}">
+                            <div class="feature-icon d-flex align-items-center">
+                                <img class="img-fluid feature-typo3-logo" width="40" height="40"
+                                     src="EXT:cb_template/cb_template/Resources/Public/images/typo3_3.svg"/>
+                            </div>
+                            <div class="feature-info">
+                                <h4>
+                                    <f:spaceless><f:format.html parseFuncTSPath="lib.parseFunc_RTE">{card.cardsitem_header}</f:format.html></f:spaceless>
+                                </h4>
+                                <f:spaceless>
+                                    <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{card.bodytext}</f:format.html>
+                                </f:spaceless>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </f:for>
+            </f:then>
+            <f:else>
+                <f:for each="{cards}" as="card">
+                    <div class="col-12 col-md-4 text-center">
+                        <div class="card-wrapper">
+                            <div class="card">
+                                <div class="card-front">
+                                    <div class="icon">
+                                        <f:for each="{card.images}" as="image">
+                                            <picture>
+                                                <source
+                                                        media="(max-width: 375px)"
+                                                        srcset="{f:uri.image(image: image, maxWidth: 64, treatIdAsReference:1, fileExtension: 'png')}"
+                                                        type="image/png" loading="lazy"/>
+                                                <source
+                                                        media="(max-width: 375px)"
+                                                        srcset="{f:uri.image(image: image, maxWidth: 64, treatIdAsReference:1, fileExtension: 'jpg')}"
+                                                        type="image/jpeg" loading="lazy"/>
+                                                <source
+                                                        media="(max-width: 1920px)"
+                                                        srcset="{f:uri.image(image: image, maxWidth: 64, treatIdAsReference:1, fileExtension: 'png')} "
+                                                        type="image/png" loading="lazy"/>
+                                                <source
+                                                        media="(max-width: 1920px)"
+                                                        srcset="{f:uri.image(image: image, maxWidth: 64, treatIdAsReference:1, fileExtension: 'jpg')} "
+                                                        type="image/jpeg" loading="lazy"/>
+                                                <f:image class="img-fluid" image="{image}" title="{image.title}"
+                                                         alt="{image.alternative}" width="64" height="64"
+                                                         loading="lazy"/>
+                                            </picture>
+                                        </f:for>
+                                    </div>
+                                    <h3>{card.cardsitem_header}</h3>
+                                </div>
+                                <div class="card-back">
+                                    <p>
+                                        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{card.bodytext}
+                                        </f:format.html>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class='r_wrap'>
+
+                                <div class='b_round'></div>
+                                <div class='s_round'>
+                                    <div class='s_arrow'></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </f:for>
+            </f:else>
+        </f:if>
+    </div>
+</f:section>
+</html>
