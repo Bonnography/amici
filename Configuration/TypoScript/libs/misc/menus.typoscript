@@ -84,17 +84,17 @@ lib.menu-footer {
         stdWrap {
             required = true
             outerWrap = <nav id="menu-footer">|</nav>
-            wrap = <ul class="menu-footer">|</ul>
+            wrap = <ul class="menu-footer__list">|</ul>
         }
         NO {
             stdWrap.htmlSpecialChars = 1
-            wrapItemAndSub = <li class="menu-footer__item lvl1">|</li>
-            ATagParams = class="menu-footer__item-link lvl1"
+            wrapItemAndSub = <li class="menu-footer__list-item lvl1">|</li>
+            ATagParams = class="menu-footer__list-item-link lvl1"
             ATagTitle.field = title
         }
         ACT < .NO
         ACT = 1
-        ACT.wrapItemAndSub = <li class="menu-footer__item lvl1 active">|</li>
+        ACT.wrapItemAndSub = <li class="menu-footer__list-item lvl1 active">|</li>
     }
 }
 
