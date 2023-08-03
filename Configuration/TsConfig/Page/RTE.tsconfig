@@ -1,5 +1,8 @@
-##############
-# CKEditor   #
-##############
-
-RTE.default.preset = default
+#############
+#### RTE ####
+#############
+RTE {
+    default {
+        preset = cb_template
+    }
+}

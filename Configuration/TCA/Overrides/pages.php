@@ -1,6 +1,5 @@
 <?php
-defined('TYPO3_MODE') || die();
-
+defined('TYPO3') or die('Access denied.');
 call_user_func(function()
 {
     /**
@@ -9,11 +8,11 @@ call_user_func(function()
     $extensionKey = 'cb_template';
 
     /**
-     * Default PageTS for CodeBombTemplate
+     * Default PageTS for CbTemplate
      */
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
         $extensionKey,
-        'Configuration/TsConfig/Page/cb_template.tsconfig',
-        'Cbw Template'
+        'Configuration/TsConfig/Page/All.tsconfig',
+        'CB Template'
     );
 });

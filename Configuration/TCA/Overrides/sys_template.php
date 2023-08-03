@@ -1,6 +1,5 @@
 <?php
-defined('TYPO3_MODE') || die();
-
+defined('TYPO3') or die('Access denied.');
 call_user_func(function()
 {
     /**
@@ -9,11 +8,11 @@ call_user_func(function()
     $extensionKey = 'cb_template';
 
     /**
-     * Default TypoScript for CodeBombTemplate
+     * Default TypoScript for CbTemplate
      */
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
         $extensionKey,
-        'Configuration/TypoScript/main',
-        'Jens Lehmann Construction Template'
+        'Configuration/TypoScript',
+        'CB Template'
     );
 });

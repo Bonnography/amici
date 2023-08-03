@@ -4,19 +4,21 @@
  * Extension Manager/Repository config file for ext "cb_template".
  */
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'Cbw Template',
-    'description' => 'Sitepackage for TYPO3 from CodeBomb-Websolutions',
+    'title' => 'CB Template',
+    'description' => '',
     'category' => 'templates',
     'constraints' => [
         'depends' => [
-            'typo3' => '10.2.0-12.9.99'
+            'typo3' => '12.4.0-12.4.99',
+            'fluid_styled_content' => '12.4.0-12.4.99',
+            'rte_ckeditor' => '12.4.0-12.4.99',
         ],
         'conflicts' => [
         ],
     ],
     'autoload' => [
         'psr-4' => [
-            'Cbw\\CbTemplate\\' => 'Classes',
+            'CodebombWebsolutions\\CbTemplate\\' => 'Classes',
         ],
     ],
     'state' => 'stable',
@@ -25,6 +27,6 @@ $EM_CONF[$_EXTKEY] = [
     'clearCacheOnLoad' => 1,
     'author' => 'Benjamin Bomberg',
     'author_email' => 'benjamin.bomberg@codebomb-websolutions.de',
-    'author_company' => 'CodeBomb-Websolutions',
-    'version' => '1.0.2',
+    'author_company' => 'Codebomb Websolutions',
+    'version' => '1.0.0',
 ];
