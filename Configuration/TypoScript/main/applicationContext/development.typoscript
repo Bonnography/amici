@@ -14,8 +14,8 @@ company {
 }
 
 page {
-    # cat=basic/Page/10; type=int+; label=Speicherplatz Jobs
-    data.jobs = 23
+    # cat=basic/Page/10; type=int+; label=Ordner Footermenu
+    menuFooter = 6
 }
 
 seo {

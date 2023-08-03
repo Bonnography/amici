@@ -76,8 +76,8 @@ lib.menu-main-fluid {
 lib.menu-footer = HMENU
 lib.menu-footer {
     includeNotInMenu = 1
-    special = list
-    special.value = {$page.imprint},{$page.privacy}
+    special = directory
+    special.value = {$page.menuFooter}
 
     1 = TMENU
     1 {

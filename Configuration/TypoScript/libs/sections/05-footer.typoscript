@@ -28,7 +28,7 @@ lib.section-footer {
                 strftime = %Y
                 wrap3 = <div class="copyright-text">|</div>
                 wrap2 = <p>|</p>
-                noTrimWrap =  | Copyright &copy; | JLehmannConstruction |
+                noTrimWrap =  | Copyright &copy; | amici musicae |
             }
         }
     }
