@@ -1,0 +1,34 @@
+.phone {
+  &:before {
+    content: '\f879';
+    font-family: "Font Awesome 5 Free Solid";
+    color: #000;
+    margin-right: 10px;
+    position: relative;
+    display: inline-block;
+  }
+}
+.mail {
+  &:before {
+    content: '\f0e0';
+    font-family: "Font Awesome 5 Free";
+    color: #000;
+    margin-right: 10px;
+    position: relative;
+    display: inline-block;
+  }
+}
+.opening {
+  &:before {
+    content: '\f017';
+    font-family: "Font Awesome 5 Free";
+    color: #000;
+    margin-right: 10px;
+    position: relative;
+    display: inline-block;
+  }
+}
+.map-placeholder {
+  border: 1px solid $main-color;
+  padding: 20px;
+}

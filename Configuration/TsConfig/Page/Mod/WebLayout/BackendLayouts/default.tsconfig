@@ -9,13 +9,29 @@ mod {
                 config {
                     backend_layout {
                         colCount = 1
-                        rowCount = 1
+                        rowCount = 3
                         rows {
                             1 {
                                 columns {
                                     1 {
-                                        name = LLL:EXT:cb_template/Resources/Private/Language/locallang_be.xlf:backend_layout.column.normal
+                                        name = Headerimage
                                         colPos = 0
+                                    }
+                                }
+                            }
+                            2 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:cb_template/Resources/Private/Language/locallang_be.xlf:backend_layout.column.normal
+                                        colPos = 5
+                                    }
+                                }
+                            }
+                            3 {
+                                columns {
+                                    1 {
+                                        name = Inline Elemente
+                                        colPos = 999
                                     }
                                 }
                             }

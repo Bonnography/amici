@@ -3,6 +3,6 @@
 #############
 RTE {
     default {
-        preset = cb_template
+        preset = default
     }
 }
