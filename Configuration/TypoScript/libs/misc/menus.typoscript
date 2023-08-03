@@ -142,22 +142,22 @@ lib.menu-social-media {
             }
         }
     }
-#    30 = TEXT
-#    30 {
-#        value = Facebook
-#        stdWrap {
+    30 = TEXT
+    30 {
+        value = Facebook
+        stdWrap {
             #            outerWrap = <div class="facebook">|</div>
 
-#            required = 1
-#            if.isTrue = {$company.facebook}
-#            typolink {
-#                parameter = {$company.facebook}
-#                extTarget = _blank
-#                ATagParams = class="facebook"
-#                wrap = <span>|</span>
-#                ATagBeforeWrap = 1
-#                title = Facebook Link
-#            }
-#        }
-#    }
+            required = 1
+            if.isTrue = {$company.facebook}
+            typolink {
+                parameter = {$company.facebook}
+                extTarget = _blank
+                ATagParams = class="facebook"
+                wrap = <span>|</span>
+                ATagBeforeWrap = 1
+                title = Facebook Link
+            }
+        }
+    }
 }
