@@ -83,7 +83,7 @@ lib.menu-footer {
     1 {
         stdWrap {
             required = true
-            outerWrap = <nav id="menu-footer">|</nav>
+            outerWrap = <nav id="menu-footer" class="menu-footer">|</nav>
             wrap = <ul class="menu-footer__list">|</ul>
         }
         NO {
