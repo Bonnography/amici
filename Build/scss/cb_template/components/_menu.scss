@@ -162,7 +162,7 @@ nav#menu-main {
     display: flex;
     justify-content: end;
     align-items: center;
-    background: #fff;
+    background: $main-color;
 
     ul.menu-main__list {
       margin: 0;
@@ -181,66 +181,22 @@ nav#menu-main {
 
         a.menu-main_item__link {
           padding: 10px 20px;
-          color: gray;
+          color: #fff;
           position: relative;
           transition: all .4s;
-          &:after {
-            content: '';
-            display: block;
-            border-width: 0;
-            width: 0;
-            background-color: transparent;
-            transition: width .5s ease, background-color .5s ease;
-          }
+          text-decoration: none;
 
           &:hover {
             text-decoration: none;
             transition: all .4s;
-
-            &:after {
-              content: "";
-              height: 2px;
-              position: absolute;
-              margin: 0 auto;
-              left: 0;
-              right: 0;
-              background: $main-color;
-              transition: all .4s;
-              display: block;
-              width: calc(100% - 40px);
-              border-width: 1px;
-              bottom: 0;
-            }
-          }
-
-          &.active {
-            text-decoration: none;
-            &:after {
-              content: "";
-              height: 2px;
-              position: absolute;
-              margin: 0 auto;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              width: calc(100% - 40px);
-              background: $main-color;
-            }
-
-            &:hover {
-              color: gray;
-            }
+            color: $hover-color;
           }
         }
 
-      }
-    }
-  }
-  #menu-support {
-    ul {
-      li {
-        a {
-          color: #bebebe;
+        &.active {
+          a.menu-main_item__link {
+            color: $hover-color;
+          }
         }
       }
     }

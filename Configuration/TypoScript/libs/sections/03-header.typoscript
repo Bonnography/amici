@@ -19,7 +19,7 @@ lib.section-header {
             0 = EXT:cb_template/Resources/Private/Partials/Page
         }
         variables {
-            headerlogo< lib.page-head-logo
+            headerlogo < lib.page-head-logo
             menu-main < lib.menu-main-fluid
         }
     }

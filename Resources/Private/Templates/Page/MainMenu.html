@@ -2,19 +2,15 @@
 <f:layout name="Default" />
 <f:section name="Main">
 
-    <f:if condition="{menu}">
+    <f:if condition="{mainnavigation}">
         <nav id="menu-main">
             <ul class="menu-main__list">
-                <f:for each="{menu}" as="page">
-                    <f:if condition="{page.content}">
-                        <f:for each="{page.content}" as="element" iteration="iterator">
-                            <f:if condition="{element.data.header}">
-                                <li class="menu-main_item lvl1 ">
-
-                                </li>
-                            </f:if>
-                        </f:for>
-                    </f:if>
+                <f:for each="{mainnavigation}" as="listitem">
+                    <li class="menu-main_item lvl1 {f:if(condition: '{listitem.active} || {listitem.data.shortcut} == {data.uid}', then: 'active')}">
+                        <f:link.typolink class="menu-main_item__link lvl1" parameter="{listitem.link}">
+                            {listitem.title}
+                        </f:link.typolink>
+                    </li>
                 </f:for>
             </ul>
         </nav>

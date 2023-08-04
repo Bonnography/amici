@@ -24446,7 +24446,7 @@ h4, .h4
    position: fixed;
    top: 0;
    width: 100%;
-   background: #fff;
+   background: #080232;
    z-index: 9999;
    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 1px -1px rgba(0, 0, 0, 0.14), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
    transition: all 0.2s ease-in-out;
@@ -24701,7 +24701,7 @@ nav#menu-main .menu-main__list .menu-main_item__link.active
       display: flex;
       justify-content: end;
       align-items: center;
-      background: #fff;
+      background: #080232;
    }
 
    nav#menu-main ul.menu-main__list
@@ -24727,69 +24727,22 @@ nav#menu-main .menu-main__list .menu-main_item__link.active
    nav#menu-main ul.menu-main__list li.menu-main_item a.menu-main_item__link
    {
       padding: 10px 20px;
-      color: gray;
+      color: #fff;
       position: relative;
       transition: all .4s;
-   }
-
-   nav#menu-main ul.menu-main__list li.menu-main_item a.menu-main_item__link:after
-   {
-      content: '';
-      display: block;
-      border-width: 0;
-      width: 0;
-      background-color: transparent;
-      transition: width .5s ease, background-color .5s ease;
+      text-decoration: none;
    }
 
    nav#menu-main ul.menu-main__list li.menu-main_item a.menu-main_item__link:hover
    {
       text-decoration: none;
       transition: all .4s;
+      color: #ff7f00;
    }
 
-   nav#menu-main ul.menu-main__list li.menu-main_item a.menu-main_item__link:hover:after
+   nav#menu-main ul.menu-main__list li.menu-main_item.active a.menu-main_item__link
    {
-      content: "";
-      height: 2px;
-      position: absolute;
-      margin: 0 auto;
-      left: 0;
-      right: 0;
-      background: #080232;
-      transition: all .4s;
-      display: block;
-      width: calc(100% - 40px);
-      border-width: 1px;
-      bottom: 0;
-   }
-
-   nav#menu-main ul.menu-main__list li.menu-main_item a.menu-main_item__link.active
-   {
-      text-decoration: none;
-   }
-
-   nav#menu-main ul.menu-main__list li.menu-main_item a.menu-main_item__link.active:after
-   {
-      content: "";
-      height: 2px;
-      position: absolute;
-      margin: 0 auto;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: calc(100% - 40px);
-      background: #080232;
-   }
-
-   nav#menu-main ul.menu-main__list li.menu-main_item a.menu-main_item__link.active:hover
-   {
-      color: gray;
-   }
-
-   #menu-support ul li a
-   {
-      color: #bebebe;
+      color: #ff7f00;
    }
 }
 
@@ -24813,16 +24766,30 @@ footer .menu-footer__list
 footer .menu-footer__list-item
 {
    display: inline-block;
+   padding-left: 10px;
+}
+
+footer .menu-footer__list-item:after
+{
+   content: "|";
+   display: inline-block;
+   padding-left: 10px;
 }
 
 footer .menu-footer__list-item:first-child
 {
-   margin-right: 20px;
+   padding-left: 0;
+}
+
+footer .menu-footer__list-item:last-child:after
+{
+   content: "";
 }
 
 footer .menu-footer__list-item-link
 {
    color: #000;
+   text-decoration: none;
 }
 
 footer #copyright
@@ -24833,4 +24800,12 @@ footer #copyright
 footer #copyright p
 {
    margin-bottom: 0;
+}
+
+@media (min-width: 996px)
+{
+   .copyright-menu-section
+   {
+      margin-top: 50px;
+   }
 }

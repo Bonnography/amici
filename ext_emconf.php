@@ -3,6 +3,7 @@
 /**
  * Extension Manager/Repository config file for ext "cb_template".
  */
+$_EXTKEY = 'cb_template';
 $EM_CONF[$_EXTKEY] = [
     'title' => 'CB Template',
     'description' => '',
