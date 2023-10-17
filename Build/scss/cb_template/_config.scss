@@ -10,16 +10,21 @@ html {
   -ms-text-size-adjust: 100%;
   height: 100%;
   scroll-behavior: smooth;
-  scroll-padding-top: 50px;
+  scroll-padding-top: 60px;
 }
 
-$oxygen-regular: 'Oxygen Regular', Sans-Serif;
-$opensans-semibold-bold: 'Open Sans Semibold Bold', Sans-Serif;
-$opensans-bold: 'Open Sans Bold', Sans-Serif;
+$outfit-regular: 'Outfit', Sans-Serif;
+$outfit-semibold: 'Outfit 400', Sans-Serif;
+$outfit-bold: 'Outfit 600', Sans-Serif;
 
+$amici-blue: #080232;
+$amici-bright-blue: #d7d3eb;
+$amici-orange: #ff7f00;
 $main-color: #080232;
 $main-bright-color: #d7d3eb;
 $hover-color: #ff7f00;
+$accent-color: #ff0000;
+$background-orange: #ffe5cc;
 
 
 ul {
@@ -32,7 +37,7 @@ ul {
 }
 
 body {
-  font-family: $oxygen-regular;
+  font-family: $outfit-regular;
   font-size: 16px;
   overflow-x: hidden;
   height: 100%;
@@ -70,22 +75,24 @@ body {
   padding: 50px 0;
 }
 a {
-  color: $main-color;
+  color: $hover-color;
   transition: color .4s;
+  text-decoration: none;
   &:hover {
-    color: $hover-color;
+    color: $main-color;
     transition: color .4s;
+    text-decoration: none;
   }
 }
 .video-fluid {
   width: 100%;
   height: auto;
 }
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(xl) {
   html {
-    scroll-padding-top: 80px;
+    scroll-padding-top: 134px;
   }
   body {
-    padding-top: 100px;
+    padding-top: 134px;
   }
 }

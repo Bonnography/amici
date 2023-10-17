@@ -1,37 +1,71 @@
-#load default config from ext
+# Load default processing options
+imports:
+  - { resource: 'EXT:rte_ckeditor/Configuration/RTE/Processing.yaml' }
+  - { resource: 'EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml' }
+  - { resource: 'EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml' }
+
+# Add configuration for the editor
+# For complete documentation see https://ckeditor.com/docs/ckeditor5/latest/features/index.html
 editor:
   config:
-    # A list of semicolon-separated style names (by default: tags) representing the style definition for each entry to be displayed in the Format drop-down list in the toolbar. Each entry must have a corresponding configuration in a setting named 'format_(tagName)'.
-    #    format_tags: "p;h3;h4"
+    toolbar:
+      items:
+        - style
+        - heading
+        # grouping separator
+        - '|'
+        - bold
+        - italic
+        - subscript
+        - superscript
+        - softhyphen
+        - '|'
+        - bulletedList
+        - numberedList
+        - blockQuote
+        - alignment
+        - '|'
+        - findAndReplace
+        - link
+        - '|'
+        - removeFormat
+        - undo
+        - redo
+        - '|'
+        - insertTable
+        - '|'
+        - specialCharacters
+        - horizontalLine
+        - sourceEditing
 
-    # config labels anf formatting "styles" drop down
-    stylesSet:
-      # block level styles
-      - { name: "Headline H2", element: "h2"}
-      - { name: "Headline H3", element: "h3" }
-      # inline styles
-    #      - { name: "Button", element: "span", attributes: {class: "btn"} }
+    heading:
+      options:
+        - { model: 'paragraph', title: 'Paragraph' }
+        - { model: 'heading1', view: 'h1', title: 'Heading 1' }
+        - { model: 'heading2', view: 'h2', title: 'Heading 2' }
+        - { model: 'heading3', view: 'h3', title: 'Heading 3' }
+        - { model: 'formatted', view: 'pre', title: 'Pre-Formatted Text' }
 
-    # toolbar config
-    # configurator: https://ckeditor.com/latest/samples/toolbarconfigurator/index.html#basic
-    toolbarGroups:
-      - { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] }
-      - { name: 'paragraph', groups: [ 'align', 'bidi' ] }
+    style:
+      definitions:
+        - { name: "Lead", element: "p", classes: ['lead'] }
+        - { name: "Small", element: "small", classes: [] }
+        - { name: "Muted", element: "span", classes: ['text-muted'] }
 
+    alignment:
+      options:
+        - { name: 'left', className: 'text-start' }
+        - { name: 'center', className: 'text-center' }
+        - { name: 'right', className: 'text-end' }
+        - { name: 'justify', className: 'text-justify' }
 
-    removeButtons: 'Save,NewPage,Preview,Print,Templates,Form,Checkbox,Radio,TextField,Textarea,Select,Button,ImageButton,HiddenField,Underline,Strike,Outdent,Indent,CreateDiv,BidiLtr,BidiRtl,Language,Anchor,Image,Flash,HorizontalRule,Smiley,PageBreak,Iframe,Format,FontSize,Font,BGColor,Maximize,About,Subscript,Superscript,RemoveFormat,Italic'
+    table:
+      defaultHeadings: { rows: 1 }
+      contentToolbar:
+        - tableColumn
+        - tableRow
+        - mergeTableCells
+        - tableProperties
+        - tableCellProperties
 
-    # style configs (css files)
-    contentsCss: "EXT:rte_ckeditor/Resources/Public/Css/contents.css"
-    #    contentsCss: ["EXT:rte_ckeditor/Resources/Public/Css/contents.css", "EXT:template_site/Resources/Public/Styles/Rte.css"]
-    removePlugins:
-      - image
     extraPlugins:
-      - justify
-      - specialchar
-    justifyClasses:
-      - text-left
-      - text-center
-      - text-right
-    externalPlugins:
-      - typo3link: { resource: "EXT:rte_ckeditor/Resources/Public/JavaScript/Plugins/typo3link.js" }

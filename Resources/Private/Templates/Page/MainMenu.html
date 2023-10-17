@@ -6,12 +6,26 @@
         <nav id="menu-main">
             <ul class="menu-main__list">
                 <f:for each="{mainnavigation}" as="listitem">
-                    <li class="menu-main_item lvl1 {f:if(condition: '{listitem.active} || {listitem.data.shortcut} == {data.uid}', then: 'active')}">
+                    <li class="menu-main_item lvl1{f:if(condition: '{listitem.active} || {listitem.data.shortcut} == {data.uid}', then: ' active')}{f:if(condition: listitem.children, then: ' w-submenu')}">
                         <f:link.typolink class="menu-main_item__link lvl1" parameter="{listitem.link}">
                             {listitem.title}
                         </f:link.typolink>
+
+                        <f:if condition="{listitem.children}">
+                                <span class="w-submenu__opener lvl1 text-center {f:if(condition: listitem.active, then: 'open')} d-xl-none"></span>
+                            <ul class="menu-main__sub lvl2">
+                                <f:for each="{listitem.children}" as="lvl2Item">
+                                    <li class="menu-main__sub-item lvl2 {f:if(condition: lvl2Item.active, then: 'active')} {f:if(condition: '({lvl2Item.data.doktype} == 4 && {lvl2Item.data.shortcut} == {data.uid})', then: 'active')}">
+                                        <a href="{lvl2Item.link}" class="menu-main__sub-item_link lvl2" title="{lvl2Item.data.title} - Link">{lvl2Item.data.title}</a>
+                                    </li>
+                                </f:for>
+                            </ul>
+                        </f:if>
                     </li>
                 </f:for>
+                <li class="menu-main_item lvl1">
+                    <f:link.page pageUid="25" class="menu-main_item__link special-menu-link">Unterstützen</f:link.page>
+                </li>
             </ul>
         </nav>
     </f:if>

@@ -1,52 +1,15 @@
-.headerimage {
-  position: relative;
-  overflow:hidden;
-  color: #fff;
-  text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 2px;
+.header-image {
 
-  &-headline {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%);
-    text-align: center;
-    width: 100%;
-  }
-  h1 {
-    text-decoration: underline;
-  }
-  h2 {
-    margin:0;
-    text-transform: unset;
-
-    &:after {
-      display: none;
-    }
-  }
-  &-image {
-    filter: brightness(50%);
-    z-index: -1;
-    position: relative;
+  img {
+    height: 200px;
+    object-fit: cover;
   }
 }
 
 @include media-breakpoint-up(lg) {
-  .headerimage {
-    height: 60vh;
-    overflow:hidden;
-    color: #fff;
-
-    &-headline {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    &-image {
-      img {
-        height: 60vh;
-        object-fit: cover;
-      }
+  .header-image {
+    img {
+      height: auto;
     }
   }
 }

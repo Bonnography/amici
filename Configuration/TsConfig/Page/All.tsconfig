@@ -32,3 +32,7 @@ mod {
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:cb_template/Configuration/TsConfig/Page/TCEFORM.tsconfig">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:cb_template/Configuration/TsConfig/Page/TCEMAIN.tsconfig">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:cb_template/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">
+
+#Content Elements
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:cb_template/Configuration/TsConfig/Page/ContentElements" extensions="tsconfig">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:cb_template/Configuration/TsConfig/Page/Plugins" extensions="tsconfig">

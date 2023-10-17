@@ -1,0 +1,60 @@
+.meta-menu-wrapper {
+  display: none;
+}
+
+@include media-breakpoint-up(xl) {
+  .meta-menu-wrapper {
+    display: block;
+    background: $amici-bright-blue;
+    padding: 5px 0;
+
+    .meta-menu {
+      &__list {
+        list-style: none;
+        margin-bottom: 0;
+
+        &-item {
+          display: inline-block;
+
+          &-link {
+            text-decoration: none;
+            color: $main-color;
+
+            &:hover {
+              color: $hover-color;
+            }
+          }
+        }
+      }
+    }
+
+    .menu-language {
+      margin-left: 0;
+
+      &:before {
+        content:"|";
+        margin: 0 7px;
+        display: inline-flex;
+      }
+
+      &__list {
+        list-style: none;
+        margin-bottom: 0;
+        display: inline-flex;
+
+        &-item {
+          display: inline-block;
+
+          a {
+            text-decoration: none;
+            color: $main-color;
+
+            &:hover {
+              color: $hover-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

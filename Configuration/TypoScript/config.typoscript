@@ -74,3 +74,10 @@ config {
     typolinkCheckRootline = 94
     typolinkEnableLinksAcrossDomains = 1
 }
+plugin.tx_form.settings.yamlConfigurations {
+    100 = EXT:cb_template/Configuration/Form/CustomFormSetup.yaml
+}
+
+module.tx_form.settings.yamlConfigurations {
+    100 = EXT:cb_template/Configuration/Form/CustomFormSetup.yaml
+}

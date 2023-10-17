@@ -1,0 +1,127 @@
+
+renderingOptions:
+  submitButtonLabel: 'Mitteilung absenden'
+  useInvisibleRecaptcha: true
+type: Form
+identifier: amici-contactform
+label: amici-contaktform
+prototypeName: standard
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: page-1
+    label: ''
+    renderables:
+      -
+        type: GridRow
+        identifier: gridrow-1
+        label: 'Grid: Row'
+        renderables:
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-1
+            label: Vorname
+            properties:
+              fluidAdditionalAttributes:
+                placeholder: Vorname
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xs:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-2
+            label: Nachname
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+                placeholder: 'Nachname*'
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: NotEmpty
+      -
+        type: GridRow
+        identifier: gridrow-2
+        label: 'Grid: Row'
+        renderables:
+          -
+            defaultValue: ''
+            type: Telephone
+            identifier: telephone-1
+            label: Telefonnummer
+            properties:
+              elementDescription: ''
+              fluidAdditionalAttributes:
+                placeholder: Telefon
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xs:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+          -
+            defaultValue: ''
+            type: Email
+            identifier: email-1
+            label: 'Email address'
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+                placeholder: 'E-Mail Adresse*'
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xs:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: EmailAddress
+              -
+                identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Text
+        identifier: message
+        label: Nachricht
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+            placeholder: 'Nachricht*'
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        type: Checkbox
+        identifier: consent-declaration
+        label: ''
+        properties:
+          elementDescription: ''
+          elementClassAttribute: declaration
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        renderingOptions:
+          doNotShowLabel: true
+        type: Recaptcha
+        identifier: recaptcha-1
+        label: reCAPTCHA
+        validators:
+          -
+            identifier: Recaptcha

@@ -58,7 +58,56 @@ lib.menu-footer {
         ACT.wrapItemAndSub = <li class="menu-footer__list-item lvl1 active">|</li>
     }
 }
+#
+# example for footer or support menu
+#
+# ####
 
+lib.menu-meta = HMENU
+lib.menu-meta {
+    includeNotInMenu = 1
+    special = directory
+    special.value = {$page.metaMenu}
+
+    1 = TMENU
+    1 {
+        stdWrap {
+            required = true
+            outerWrap = <nav id="meta-menu" class="meta-menu">|</nav>
+            wrap = <ul class="meta-menu__list">|</ul>
+        }
+        NO {
+            stdWrap.htmlSpecialChars = 1
+            wrapItemAndSub = <li class="meta-menu__list-item lvl1">|</li>
+            ATagParams = class="meta-menu__list-item-link lvl1"
+            ATagTitle.field = title
+        }
+        ACT < .NO
+        ACT = 1
+        ACT.wrapItemAndSub = <li class="meta-menu__list-item lvl1 active">|</li>
+    }
+}
+
+lib.menu-language = FLUIDTEMPLATE
+lib.menu-language {
+    templateName = LanguageMenu
+    templateRootPaths {
+        0 = EXT:cb_template/Resources/Private/Templates/Page
+    }
+    layoutRootPaths {
+        0 = EXT:cb_template/Resources/Private/Layouts/Page
+    }
+    partialRootPaths {
+        0 = EXT:cb_template/Resources/Private/Partials/Page
+    }
+    dataProcessing {
+        20 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+        20 {
+            languages = 0, 1
+            as = languageMenu
+        }
+    }
+}
 
 #
 # example for social media menu
@@ -107,7 +156,7 @@ lib.menu-social-media {
         value = Facebook
         stdWrap {
             #            outerWrap = <div class="facebook">|</div>
-            if.isTrue.data = {$company.facebook}
+            if.isTrue = {$company.facebook}
             typolink {
                 parameter = {$company.facebook}
                 extTarget = _blank

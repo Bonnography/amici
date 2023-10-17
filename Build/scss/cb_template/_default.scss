@@ -9,10 +9,10 @@
 @import "../_bootstrap/bootstrap";
 
 //// Font Awesome
-@import "../_fontawesome/fontawesome";
+//@import "../_fontawesome/fontawesome";
 //@import "../_fontawesome/brands";
-@import "../_fontawesome/regular";
-@import "../_fontawesome/solid";
+//@import "../_fontawesome/regular";
+//@import "../_fontawesome/solid";
 
 
 // Animate
@@ -33,6 +33,12 @@
 /*
 * === _base Part 2 ===
 */
+
+/*
+* === libs ===
+ */
+
+@import "../_libs/splide";
 
 /*
  * misc
@@ -56,10 +62,16 @@
 
 @import "_contentElements/headerimage";
 @import "_contentElements/text";
-@import "_contentElements/teaserLink";
-@import "_contentElements/contactElement";
+@import "_contentElements/news";
+@import "_contentElements/textMedia";
+@import "_contentElements/carousel";
+@import "_contentElements/inlineElements";
 
-
+/*
+ * plugins
+ */
+@import "plugins/concerts-list";
+@import "plugins/glightbox";
 
 /*
 * === COMPONENTS ===
@@ -68,4 +80,6 @@
 @import "components/page";
 @import "components/header";
 @import "components/menu";
+@import "components/metaMenu";
 @import "components/footer";
+@import "components/forms";

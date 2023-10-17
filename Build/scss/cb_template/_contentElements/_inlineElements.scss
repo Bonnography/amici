@@ -1,0 +1,9 @@
+.content-column-item {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .content-column-item {
+    margin-bottom: 0;
+  }
+}

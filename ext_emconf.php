@@ -29,5 +29,5 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Benjamin Bomberg',
     'author_email' => 'benjamin.bomberg@codebomb-websolutions.de',
     'author_company' => 'Codebomb Websolutions',
-    'version' => '1.0.0',
+    'version' => '12.4.0',
 ];

@@ -21,6 +21,8 @@ lib.section-header {
         variables {
             headerlogo < lib.page-head-logo
             menu-main < lib.menu-main-fluid
+            menu-meta < lib.menu-meta
+            menu-language < lib.menu-language
         }
     }
 }

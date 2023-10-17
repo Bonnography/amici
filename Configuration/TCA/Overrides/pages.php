@@ -1,5 +1,5 @@
 <?php
-defined('TYPO3') or die('Access denied.');
+defined('TYPO3') or die();
 call_user_func(function()
 {
     /**
@@ -21,14 +21,15 @@ call_user_func(function()
 (function () {
     // SAME as registered in ext_tables.php
     $customPageDoktype = 116;
-    $customIconClass = 'tx_examples-archive-page';
+    $customIconClass = 'actions-document-localize';
 
     // Add the new doktype to the page type selector
     $GLOBALS['TCA']['pages']['columns']['doktype']['config']['items'][] = [
         'News',
         $customPageDoktype,
         $customIconClass,
+        'default',
     ];
     // Add the icon to the icon class configuration
-    $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes'][$customPageDoktype] = 'tx_examples-archive-page';
+    $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes'][$customPageDoktype] = 'actions-document-localize';
 })();

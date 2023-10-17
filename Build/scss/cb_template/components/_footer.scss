@@ -5,9 +5,10 @@ footer {
   .menu-footer {
     text-align: center;
     margin-bottom: 10px;
-    
+
     &__list {
       padding-left: 0;
+
       &-item {
         display: inline-block;
         padding-left: 10px;
@@ -35,16 +36,45 @@ footer {
       }
     }
   }
+
+  .facebook {
+    background: no-repeat center url('../images/facebook.svg');
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+
+    span {
+      display: none;
+    }
+  }
+
   #copyright {
     font-size: 14px;
-   p {
-     margin-bottom: 0;
-   }
+
+    p {
+      margin-bottom: 0;
+    }
   }
 }
 
+
+.copyright-menu-section {
+  margin-top: 50px;
+}
+
 @media (min-width: 996px) {
-  .copyright-menu-section {
-    margin-top: 50px;
+  footer {
+    .menu-footer {
+      margin-bottom: 0;
+      text-align: right;
+
+      &__list {
+        margin-bottom: 0;
+      }
+    }
+    .footer-left, .footer-right {
+      width: 75%;
+    }
   }
 }

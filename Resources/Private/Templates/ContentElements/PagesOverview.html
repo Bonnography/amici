@@ -1,0 +1,75 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+<f:section name="Main">
+    <f:if condition="{data.header}">
+        <f:then>
+            <f:render partial="Header/Header" arguments="{_all}"/>
+        </f:then>
+    </f:if>
+    <f:if condition="{menu}">
+        <div class="row">
+            <f:for each="{menu}" as="page" iteration="iterator">
+                <f:if condition="{page.content}">
+                    <div class="col-12 col-md-6 col-lg-4 {f:if(condition: '{iterator.isLast}', then: 'last')}">
+                        <div class="page-teaser {f:if(condition: '{iterator.index} > 5 && {iteration.index} < 8', then: 'page-teaser__lastElements', else: '')}">
+                            <f:if condition="{imageArr}">
+                                <f:then>
+                                    <f:for each="{imageArr}" as="image">
+                                        <f:render section="image" arguments="{image: image}" />
+                                    </f:for>
+                                </f:then>
+                                <f:else>
+                                    <f:if condition="{page.data.og_image}">
+                                        <f:render section="image" arguments="{image: page.files.0}" />
+                                    </f:if>
+                                </f:else>
+                            </f:if>
+                            <div class="page-teaser__text">
+                                <h3>{page.data.seo_title}</h3>
+                                <p>{page.data.description}</p>
+                            </div>
+
+
+                            <f:for each="{page.content}" as="contentForImage">
+                                <f:if condition="{contentForImage.data.CType} == 'headerImage'">
+                                    <f:then>
+                                        <f:variable name="imageArr" value="{contentForImage.files}"/>
+                                    </f:then>
+                                </f:if>
+                            </f:for>
+                            <a href="{page.link}" class="btn btn-functional" {f:if(condition: page.target, then: ' target="{page.target}"')}
+                            title="{page.title}">Mehr erfahren
+                            </a>
+                        </div>
+                    </div>
+                </f:if>
+            </f:for>
+        </div>
+    </f:if>
+
+</f:section>
+<f:section name="image">
+    <div class="page-teaser__image">
+        <picture>
+            <source
+                    media="(max-width: 375px)"
+                    srcset="{f:uri.image(image: image, maxWidth: 350, treatIdAsReference:1, fileExtension: 'jpeg')}"
+                    type="image/jpeg"/>
+            <source
+                    media="(max-width: 768px)"
+                    srcset="{f:uri.image(image: image, maxWidth: 768, treatIdAsReference:1, fileExtension: 'jpeg')}"
+                    type="image/jpeg"/>
+            <source
+                    media="(max-width: 1024px)"
+                    srcset="{f:uri.image(image: image, maxWidth: 300, treatIdAsReference:1, fileExtension: 'jpeg')}"
+                    type="image/jpeg"/>
+            <source
+                    media="(max-width: 1920px)"
+                    srcset="{f:uri.image(image: image, maxWidth: 350, treatIdAsReference:1, fileExtension: 'jpeg')}"
+                    type="image/jpeg"/>
+            <f:image image="{image}" class="img-fluid lazyload" alt="{image.alternative}"
+                     title="{image.title}" loading="lazy"/>
+        </picture>
+    </div>
+</f:section>
+</html>

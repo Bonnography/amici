@@ -1,0 +1,19 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{data.header} || {data.subheader}">
+	<f:switch expression="{data.header_layout}">
+		<f:case value="0">
+			<h1 class="{f:if(condition: data.header_position, then: 'ce-headline-{data.header_position}')}">{data.header}</h1>
+		</f:case>
+		<f:case value="1">
+			<h2 class="{f:if(condition: data.header_position, then: 'ce-headline-{data.header_position}')}">{data.header}</h2>
+		</f:case>
+		<f:case value="2">
+			<h3 class="{f:if(condition: data.header_position, then: 'ce-headline-{data.header_position}')}">{data.header}</h3>
+		</f:case>
+		<f:case value="3">
+			<h4 class="{f:if(condition: data.header_position, then: 'ce-headline-{data.header_position}')}">{data.header}</h4>
+		</f:case>
+		<f:case value="100"></f:case>
+	</f:switch>
+</f:if>
+</html>
