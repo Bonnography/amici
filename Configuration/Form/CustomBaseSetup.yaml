@@ -23,11 +23,11 @@ TYPO3:
             Form:
               renderingOptions:
                 templateRootPaths:
-                  100: 'EXT:cb_template/Resources/Private/Templates/Form/Frontend/Templates/'
+                  1975: 'EXT:cb_template/Resources/Private/Templates/Form/Frontend/Templates/'
                 partialRootPaths:
-                  100: 'EXT:cb_template/Resources/Private/Templates/Form/Frontend/Partials/'
+                  1975: 'EXT:cb_template/Resources/Private/Templates/Form/Frontend/Partials/'
                 layoutRootPaths:
-                  100: 'EXT:cb_template/Resources/Private/Templates/Form/Frontend/Layouts/'
+                  1975: 'EXT:cb_template/Resources/Private/Templates/Form/Frontend/Layouts/'
                 translation:
                   translationFiles:
                     # default translation files for the frontend

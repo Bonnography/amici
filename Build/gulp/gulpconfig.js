@@ -20,6 +20,7 @@ module.exports = function () {
             ],
             mainJS: entryFolder + 'js/cb_template.js',
             jsFile: entryFolder + 'js/',
+            formJs: entryFolder + 'js/Frontend/form.js',
             fonts: entryFolder + 'font/**/*.{eot,svg,ttf,woff,woff2}',
             images: [
                 entryFolder + 'img/*.{png,jpg,jpeg,gif,svg,ico}',
@@ -35,6 +36,7 @@ module.exports = function () {
         target: {
             css: outputFolder + 'css/',
             js: outputFolder + 'js/',
+            formJs: outputFolder + 'JavaScript/Frontend/',
             images: outputFolder + 'images/',
             backendimages: outputFolder + 'images/backend/',
             icons: outputFolder+ 'images/icons/',
