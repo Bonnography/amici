@@ -88,6 +88,13 @@ class Concerts extends AbstractEntity
     protected string $teaser = '';
 
     /**
+     * time
+     *
+     * @var string
+     */
+    protected string $time = '';
+
+    /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\Category>
      * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
      */
@@ -288,6 +295,27 @@ class Concerts extends AbstractEntity
     public function setTeaser($teaser)
     {
         $this->teaser = $teaser;
+    }
+
+    /**
+     * Returns the time
+     *
+     * @return string time
+     */
+    public function getTime()
+    {
+        return $this->time;
+    }
+
+    /**
+     * Sets the time
+     *
+     * @param string $time
+     * @return void
+     */
+    public function setTime($time)
+    {
+        $this->time = $time;
     }
 
     /**

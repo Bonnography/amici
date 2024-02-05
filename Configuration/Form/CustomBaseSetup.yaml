@@ -13,6 +13,12 @@ TYPO3:
         allowDeleteFromExtensionPaths: false
       prototypes:
         standard:
+          finishersDefinition:
+            Confirmation:
+              options:
+                templateName: Confirmation
+                templateRootPaths:
+                  10: 'EXT:cb_template/Resources/Private/Templates/Form/Frontend/Templates/Finishers/Confirmation'
           formElementsDefinition:
             Form:
               renderingOptions:
@@ -26,4 +32,4 @@ TYPO3:
                   translationFiles:
                     # default translation files for the frontend
                     10: 'EXT:form/Resources/Private/Language/locallang.xlf'
-                    20: 'EXT:cb_template/Resources/Private/Language/locallang.xlf'
+                    20: 'EXT:cb_template/Resources/Private/Language/locallang_form.xlf'

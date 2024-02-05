@@ -2,9 +2,9 @@
 <f:layout name="Default" />
 <f:section name="Main">
     <f:if condition="{data.header}">
-        <f:then>
-            <f:render partial="Header/Header" arguments="{_all}"/>
-        </f:then>
+        <f:render section="Header" optional="true">
+            <f:render partial="Header/All" arguments="{_all}" />
+        </f:render>
     </f:if>
     <div class="text-bodytext">
         <f:format.html>{data.bodytext}</f:format.html>

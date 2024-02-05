@@ -13,6 +13,7 @@ module.exports = function () {
                 entryFolder + 'scss/cb_template.scss',
                 entryFolder + 'scss/cb_template/**/*.scss'
             ],
+            rteCss: entryFolder + 'scss/rte.scss',
             jsLibs: [
                 entryFolder + 'js/libs/*.js',
                 entryFolder + 'js/bootstrap/bootstrap.js',
@@ -38,7 +39,8 @@ module.exports = function () {
             backendimages: outputFolder + 'images/backend/',
             icons: outputFolder+ 'images/icons/',
             fileicons: outputFolder + 'images/icons/FileIcons',
-            fonts: outputFolder + 'fonts/'
+            fonts: outputFolder + 'fonts/',
+            rteCss: outputFolder + 'css/Backend/'
         }
     };
     return config;

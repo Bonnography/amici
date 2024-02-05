@@ -29,6 +29,7 @@ class ConcertsController extends ActionController
     }
     public function listAction(): ResponseInterface
     {
+        $GLOBALS['TSFE']->addCacheTags(['concerts_list']);
         $querySettings = GeneralUtility::makeInstance(Typo3QuerySettings::class);
         $querySettings->setRespectStoragePage(false);
         $this->concertsRepository->setDefaultQuerySettings($querySettings);

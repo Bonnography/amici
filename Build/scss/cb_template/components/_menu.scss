@@ -2,22 +2,27 @@
  * Mobile Navigation
  */
 nav#menu-main {
-  display: none;
-  position: fixed;
+  position: absolute;
   z-index: 999;
   left: 0;
   width: 100%;
-  height: 100%;
   background: $main-color;
   color: #fff;
-  transition: top 0.5s ease-out;
-  top: 0;
+  transition: opacity .3s,transform .3s;
+  top: 80px;
+  height: calc(100vh - 80px);
+  opacity: 0;
+  transform: translateY(-30px);
+
+  &.open {
+    display: flex;
+    transition: opacity .44s,transform .44s;
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   .menu-main__list {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     text-align: center;
     width: 100%;
 
@@ -32,13 +37,10 @@ nav#menu-main {
       &__link {
         display: block;
         width: 100%;
-        padding: 15px 5px;
+        padding: 15px 60px;
         color: #fff;
         text-decoration: none;
 
-        &.active {
-          color: $main-color;
-        }
 
         &.special-menu-link {
           width: 100%;
@@ -49,16 +51,24 @@ nav#menu-main {
         }
       }
 
+      &.active {
+        .menu-main_item__link {
+          color: $amici-orange;
+        }
+      }
       .w-submenu__opener {
         position: absolute;
-        background-image: url("data:image/svg+xml,%3Csvg fill='%23fff' height='800px' width='800px' version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 407.437 407.437' xml:space='preserve'%3E%3Cpolygon points='386.258,91.567 203.718,273.512 21.179,91.567 0,112.815 203.718,315.87 407.437,112.815 '/%3E%3C/svg%3E");
+        //background-image: url("data:image/svg+xml,%3Csvg fill='%23fff' height='800px' width='800px' version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 407.437 407.437' xml:space='preserve'%3E%3Cpolygon points='386.258,91.567 203.718,273.512 21.179,91.567 0,112.815 203.718,315.87 407.437,112.815 '/%3E%3C/svg%3E");
+        background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8" standalone="no"%3F><svg width="800px" height="800px" viewBox="0 -4.5 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><title>chevron-down</title><desc>Created with Sketch Beta.</desc><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"><g id="Icon-Set-Filled" sketch:type="MSLayerGroup" transform="translate(-574.000000, -1201.000000)" fill="%23ffffff"><path d="M597.405,1201.63 C596.576,1200.8 595.23,1200.8 594.401,1201.63 L586.016,1210.88 L577.63,1201.63 C576.801,1200.8 575.455,1200.8 574.626,1201.63 C573.797,1202.46 573.797,1203.81 574.626,1204.64 L584.381,1215.4 C584.83,1215.85 585.429,1216.05 586.016,1216.01 C586.603,1216.05 587.201,1215.85 587.65,1215.4 L597.405,1204.64 C598.234,1203.81 598.234,1202.46 597.405,1201.63" id="chevron-down" sketch:type="MSShapeGroup"></path></g></g></svg>');
         top: 0;
         right: 25px;
-        width: 16px;
-        height: 16px;
-        background-size: cover;
-        margin: 19px 0;
+        width: 54px;
+        height: 54px;
+        background-size: 16px;
+        background-position: center;
+        background-repeat: no-repeat;
         transition: rotate .4s;
+        z-index: 9;
 
         &.open {
           transform: rotate(180deg);
@@ -82,7 +92,7 @@ nav#menu-main {
           padding: 15px 5px;
 
           a {
-            text-shadow: 2px 2px 2px #fff;
+            color: #000;
             text-decoration: none;
           }
 
@@ -222,26 +232,34 @@ nav#menu-main {
   }
 }
 
+.header-small {
+  #menu-main {
+    height: calc(100vh - 60px);
+    top: 60px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   nav#menu-main {
     position: relative;
     padding: 0;
     //width: 100%;
     text-align: right;
+    top: 0;
     height: 80px;
     display: flex;
     justify-content: end;
     align-items: center;
     background: $main-color;
     transition: unset;
+    opacity: 1;
+    transform: translateY(0);
 
     ul.menu-main__list {
       margin: 0;
       position: relative;
-      top: unset;
-      left: unset;
-      transform: unset;
-      text-align: right;
+      display: flex;
+      justify-content: flex-end;
 
       li.menu-main_item {
         display: inline-block;
@@ -258,17 +276,6 @@ nav#menu-main {
           transition: all .4s;
           text-decoration: none;
           font-size: 1.1rem;
-
-          &:hover {
-            transition: all .4s;
-            color: $hover-color;
-          }
-          &.special-menu-link {
-            color: $accent-color;
-            text-decoration: none;
-            display: block;
-            padding: 10px 0 10px 20px;
-          }
         }
 
         &.active {
@@ -294,29 +301,19 @@ nav#menu-main {
               transition: all .4s;
 
               a {
-                color: $amici-orange;
+                text-decoration: underline;
+                text-underline-offset: 4px;
                 transition: all .4s;
-              }
-            }
-
-            &.active {
-              color: $amici-orange;
-            }
-          }
-
-          &-sub {
-            &-item {
-              &:hover {
-                .menu-main__sub-sub-item_link {
-                  color: $amici-orange;
-                  transition: all .4s;
-                }
               }
             }
           }
         }
-
         &:hover {
+          a.menu-main_item__link {
+            transition: all .4s;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+          }
           .menu-main__sub {
             transition: unset;
             display: block;
@@ -324,23 +321,50 @@ nav#menu-main {
             visibility: unset;
             width: 200px;
             padding-left: 0;
-            background: $white;
+            background: $main-color;
             text-align: center;
             left: 50%;
             transform: translate(-50%);
-            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 1px -1px rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 
             .menu-main__sub-item_link {
-              color: $main-color;
-
-              &:hover {
-                color: $hover-color;
+              color: #fff;
+            }
+            &-item.active {
+              .menu-main__sub-item_link {
+                color: $amici-orange;
               }
             }
           }
         }
+        &.w-submenu {
+          .menu-main_item__link {
+            padding: 10px 30px 10px 10px;
+          }
+          &:hover {
+            .w-submenu__opener {
+              transform: rotate(180deg);
+              transition: transform .3s;
+            }
+          }
+        }
+        .w-submenu__opener {
+          right: 0;
+          width: 23px;
+          height: 100%;
+          background-size: 10px;
+          transition: transform .3s;
+
+          &.open {
+            transform: rotate(0);
+          }
+        }
       }
     }
-
   }
+  .header-small {
+    #menu-main {
+      top: 0;
+    }
+  }
+
 }

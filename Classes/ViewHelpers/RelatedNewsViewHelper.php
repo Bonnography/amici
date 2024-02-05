@@ -18,22 +18,19 @@ class RelatedNewsViewHelper extends AbstractViewHelper
     public function render() {
         $newsArray = $this->arguments['newsArray'];
 
-        $mostRecent = 0;
         $relatedNews = [];
-        foreach ($newsArray as $news)
-        {
-            $date = $news['data']['crdate'];
-            //debug($date);
-            if ($date > $mostRecent) {
-                $mostRecent = $date;
-            }
-            //debug($mostRecent);
-            if ($news['data']['crdate'] === $mostRecent) {
-                $relatedNews = $news;
-            }
 
+        foreach ($newsArray as $key => $news)
+        {
+            $timestamps[$key] = $news['data']['crdate'];
+        }
+        array_multisort($timestamps, SORT_DESC, $newsArray);
+
+        for ($i = 2; $i < count($newsArray); $i++)
+        {
+            unset($newsArray[$i]);
         }
 
-        return $relatedNews;
+        return $newsArray;
     }
 }

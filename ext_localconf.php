@@ -17,7 +17,10 @@ $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['teaser'] = 'EXT:cb_template/Confi
  * PageTS
  */
 ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:cb_template/Configuration/TsConfig/Page/All.tsconfig">');
-
+// Add custom doktype to the page tree toolbar
+ExtensionManagementUtility::addUserTSConfig(
+    "@import 'EXT:cb_template/Configuration/TsConfig/User/*.tsconfig'"
+);
 ExtensionUtility::configurePlugin(
     'CbTemplate',
     // arbitrary, but unique plugin name (not visible in the backend)

@@ -39,6 +39,21 @@
         <trans-unit id="inline_item">
             <source>Item</source>
         </trans-unit>
+        <trans-unit id="tt_content.removeBottomSpace">
+            <source>Remove bottom space</source>
+        </trans-unit>
+        <trans-unit id="tt_content.removeBottomSpace.check">
+            <source>Yes</source>
+        </trans-unit>
+        <trans-unit id="tt_content.removeBottomSpace.check">
+            <source>Yes</source>
+        </trans-unit>
+        <trans-unit id="tt_content.image_frontend_layout">
+            <source>Frontend Layout</source>
+        </trans-unit>
+        <trans-unit id="tt_content.button_style">
+            <source>Primary or Secondary Button</source>
+        </trans-unit>
         </body>
     </file>
 </xliff>

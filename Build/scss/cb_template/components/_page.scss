@@ -1,5 +1,28 @@
-.bg-light-gray {
-  background: #eee;
+.bg-amici-blue {
+  background: $main-color;
+  position: relative;
+  color: #fff;
+
+  &:before {
+    left: -50rem;
+  }
+  &:after {
+    right: -50rem;
+  }
+  &:before, &:after {
+    content: "";
+    width: 51rem;
+    z-index: -1;
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: $main-color;
+  }
+}
+
+.bg-amici-bright-blue {
+  background: $main-bright-color;
   position: relative;
 
   &:before {
@@ -16,7 +39,7 @@
     height: 100%;
     position: absolute;
     top: 0;
-    background-color: #eee;
+    background-color: $main-bright-color;
   }
 }
 
@@ -26,12 +49,22 @@
 .ce-headline-right {
   text-align: right;
 }
-header {
+.header {
   margin-bottom: 25px;
+}
 
-  h2,h3 {
-    margin-bottom: 10px;
-  }
+.background-dark-blue {
+  background: $main-color;
+  color: #fff;
+  padding: 5px 10px;
+}
+.background-bright-blue {
+  background: $main-bright-color;
+  padding: 5px 10px;
+}
+
+.marker-orange {
+  color: $amici-orange;
 }
 
 @media (max-width: 767px) {

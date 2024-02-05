@@ -32,21 +32,33 @@ footer {
         &-link {
           color: #000;
           text-decoration: none;
+
+          &:hover {
+            color: $hover-color;
+          }
         }
       }
     }
   }
 
-  .facebook {
-    background: no-repeat center url('../images/facebook.svg');
-    display: block;
-    width: 40px;
-    height: 40px;
-    background-size: cover;
+  .facebook, .instagram {
+    display: inline-flex;
 
     span {
       display: none;
     }
+  }
+  .facebook {
+    background: no-repeat center / cover url('../images/facebook.svg');
+    width: 40px;
+    height: 40px;
+
+  }
+  .instagram {
+    background: no-repeat center / cover url('../images/instagram.svg');
+    width: 38px;
+    height: 38px;
+    margin-left: 20px;
   }
 
   #copyright {

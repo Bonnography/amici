@@ -26,6 +26,7 @@ class ConcertsRepository extends Repository
     {
         $query = $this->createQuery();
         $query->getQuerySettings()->setRespectStoragePage(FALSE);
+        $query->setOrderings(array("date" => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING));
         $date = new \DateTime('midnight');
         $query->matching(
             $query->greaterThanOrEqual('date', $date->format('Y-m-d'))
@@ -37,6 +38,7 @@ class ConcertsRepository extends Repository
     {
         $query = $this->createQuery();
         $query->getQuerySettings()->setRespectStoragePage(FALSE);
+        $query->setOrderings(array("date" => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING));
         $date = new \DateTime('midnight');
         $query->matching(
             $query->lessThan('date', $date->format('Y-m-d'))

@@ -6,6 +6,42 @@ type: Form
 identifier: amici-contactform
 label: amici-contaktform
 prototypeName: standard
+finishers:
+  -
+    options:
+      subject: 'Nachricht vom amici musicae Kontaktformular'
+      recipients:
+        info@codebomb-websolutions.de: CBW
+      senderAddress: '{email-contact-form}'
+      senderName: '{firstname} {lastname-contact-form}'
+      addHtmlPart: true
+      attachUploads: true
+      translation:
+        language: Default
+      title: ''
+      templateName: 'Default'
+      templateRootPaths:
+        10: 'EXT:cb_template/Resources/Private/Templates/Form/Frontend/Templates/Finishers/Email/Admin/'
+    identifier: EmailToReceiver
+  -
+    options:
+      subject: 'Anfrage über das amici musicae Kontaktformular'
+      recipients:
+        '{email-contact-form}': '{firstname} {lastname-contact-form}'
+      senderAddress: info@codebomb-websolutions.de
+      senderName: CBW
+      addHtmlPart: true
+      attachUploads: true
+      title: ''
+      templateName: 'Default'
+      templateRootPaths:
+        10: 'EXT:cb_template/Resources/Private/Templates/Form/Frontend/Templates/Finishers/Email/User/'
+    identifier: EmailToSender
+  -
+    options:
+      message: ''
+      contentElementUid: ''
+    identifier: Confirmation
 renderables:
   -
     renderingOptions:
@@ -23,7 +59,7 @@ renderables:
           -
             defaultValue: ''
             type: Text
-            identifier: text-1
+            identifier: firstname
             label: Vorname
             properties:
               fluidAdditionalAttributes:
@@ -37,7 +73,7 @@ renderables:
           -
             defaultValue: ''
             type: Text
-            identifier: text-2
+            identifier: lastname-contact-form
             label: Nachname
             properties:
               fluidAdditionalAttributes:
@@ -60,7 +96,7 @@ renderables:
           -
             defaultValue: ''
             type: Telephone
-            identifier: telephone-1
+            identifier: phone
             label: Telefonnummer
             properties:
               elementDescription: ''
@@ -75,12 +111,12 @@ renderables:
           -
             defaultValue: ''
             type: Email
-            identifier: email-1
-            label: 'Email address'
+            identifier: email-contact-form
+            label: 'E-mail-address'
             properties:
               fluidAdditionalAttributes:
                 required: required
-                placeholder: 'E-Mail Adresse*'
+                placeholder: 'E-Mail-Adresse*'
               gridColumnClassAutoConfiguration:
                 viewPorts:
                   xs:
@@ -94,8 +130,8 @@ renderables:
                 identifier: NotEmpty
       -
         defaultValue: ''
-        type: Text
-        identifier: message
+        type: Textarea
+        identifier: message-contact-form
         label: Nachricht
         properties:
           fluidAdditionalAttributes:

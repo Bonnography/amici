@@ -19,6 +19,7 @@ tt_content {
             10 {
                 special = directory
                 special.value.field = pages
+                alternativeSortingField = crdate DESC
                 as = news
                 dataProcessing {
                     10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
@@ -182,6 +183,36 @@ tt_content {
         }
         layoutRootPaths {
             10 = EXT:cb_template/Resources/Private/Layouts/ContentElements/
+        }
+    }
+    uploads {
+        templateRootPaths {
+            10 = EXT:cb_template/Resources/Private/Templates/ContentElements/
+        }
+        partialRootPaths {
+            10 = EXT:cb_template/Resources/Private/Partials/ContentElements/
+        }
+        layoutRootPaths {
+            10 = EXT:cb_template/Resources/Private/Layouts/ContentElements/
+        }
+    }
+    image {
+        templateRootPaths {
+            10 = EXT:cb_template/Resources/Private/Templates/ContentElements/
+        }
+        partialRootPaths {
+            10 = EXT:cb_template/Resources/Private/Partials/ContentElements/
+        }
+        layoutRootPaths {
+            10 = EXT:cb_template/Resources/Private/Layouts/ContentElements/
+        }
+    }
+    felogin_login {
+        layoutRootPaths {
+            10 = EXT:cb_template/Resources/Private/Layouts/ContentElements/
+        }
+        partialRootPaths {
+            10 = EXT:cb_template/Resources/Private/Partials/ContentElements/
         }
     }
 }

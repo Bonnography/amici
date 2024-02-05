@@ -1,2 +1,3 @@
 @import 'EXT:cb_template/Configuration/Typoscript/libs/plugins/concerts/constants.typoscript'
 @import 'EXT:cb_template/Configuration/Typoscript/libs/plugins/Form/constants.typoscript'
+@import 'EXT:cb_template/Configuration/TypoScript/libs/plugins/Felogin/constants.typoscript'

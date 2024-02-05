@@ -1,57 +1,50 @@
-.meta-menu-wrapper {
-  display: none;
-}
+.mobile-meta-menu {
+  margin-top: 20px;
 
-@include media-breakpoint-up(xl) {
-  .meta-menu-wrapper {
-    display: block;
-    background: $amici-bright-blue;
-    padding: 5px 0;
-
-    .meta-menu {
-      &__list {
-        list-style: none;
-        margin-bottom: 0;
-
-        &-item {
-          display: inline-block;
-
-          &-link {
-            text-decoration: none;
-            color: $main-color;
-
-            &:hover {
-              color: $hover-color;
-            }
-          }
-        }
-      }
-    }
-
-    .menu-language {
-      margin-left: 0;
-
+  .menu-meta-link {
+    color: #fff;
+    &__languages {
       &:before {
         content:"|";
         margin: 0 7px;
         display: inline-flex;
       }
+    }
+  }
+}
 
-      &__list {
-        list-style: none;
-        margin-bottom: 0;
-        display: inline-flex;
+.menu-language__list {
+  display: none;
+}
 
-        &-item {
-          display: inline-block;
+@include media-breakpoint-up(lg) {
+  .menu-footer {
+    display: inline-block;
+  }
+  .menu-language {
+    margin-left: 0;
+    display: inline-block;
 
-          a {
-            text-decoration: none;
-            color: $main-color;
+    &:before {
+      content:"|";
+      margin: 0 7px 0 0;
+      display: inline-flex;
+    }
 
-            &:hover {
-              color: $hover-color;
-            }
+    &__list {
+      list-style: none;
+      margin-bottom: 0;
+      display: inline-flex;
+
+      &-item {
+        display: inline-block;
+
+        a {
+          text-decoration: none;
+          color: $main-color;
+
+          &:hover {
+            color: $hover-color;
           }
         }
       }

@@ -22,3 +22,5 @@ $dokTypeRegistry->add(
 ExtensionManagementUtility::addUserTSConfig(
     "@import 'EXT:cb_template/Configuration/TsConfig/User/*.tsconfig'"
 );
+
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['EXT:felogin/Resources/Private/Language/locallang.xlf'][] = 'EXT:cb_template/Resources/Private/Language/locallang_felogin.xlf';

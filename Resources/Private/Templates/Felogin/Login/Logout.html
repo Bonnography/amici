@@ -3,27 +3,23 @@
 <h3>
     <f:render partial="RenderLabelOrMessage" arguments="{key: 'status_header'}"/>
 </h3>
-<p>
-    <f:render partial="RenderLabelOrMessage" arguments="{key: 'status_message'}"/>
-</p>
+
 
 <f:form action="login" actionUri="{actionUri}" target="_top" fieldNamePrefix="">
     <fieldset>
-        <legend>
-            <f:translate key="logout"/>
-        </legend>
+
         <div>
             <label for="tx-felogin-input-logout">
                 <f:translate key="username"/>
             </label>
-            {user.username}
+            <strong>{user.username}</strong>
         </div>
-        <div>
-            <f:form.submit value="{f:translate(key: 'logout')}" name="submit" id="tx-felogin-input-logout"/>
+        <div class="mt-3">
+            <f:form.submit value="{f:translate(key: 'logout')}" name="submit" id="tx-felogin-input-logout" class="btn btn-primary"/>
         </div>
 
         <div class="felogin-hidden">
-            <f:form.hidden name="logintype" value="logout"/>
+            <f:form.hidden name="logintype" value="logout" />
         </div>
     </fieldset>
 </f:form>

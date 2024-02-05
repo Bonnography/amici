@@ -34,7 +34,7 @@ $headline = [
 
 $GLOBALS['TCA']['tt_content']['types']['headline']['showitem'] = '
          --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
-                    --palette--;;general,headline,
+                    --palette--;;general,headline,remove_bottom_space,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
                     --palette--;;frames,
                     --palette--;;appearanceLinks,

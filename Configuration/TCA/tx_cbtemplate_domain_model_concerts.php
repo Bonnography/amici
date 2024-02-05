@@ -20,10 +20,10 @@ return [
         'iconfile' => 'EXT:cb_template/Resources/Public/images/backend/actions-ticket.svg'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden,concert_image, title, subtitle, composer, teaser,date,location,price,ticket_link,description,',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden,concert_image, title, subtitle, composer, teaser,date,time,location,price,ticket_link,description,',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, concert_image,title, subtitle, composer, teaser, date,location,price,ticket_link,description,categories,
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, concert_image,title, subtitle, composer, teaser, date,time,location,price,ticket_link,description,categories,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime
                 '],
     ],
@@ -150,6 +150,14 @@ return [
                 'eval' => 'date',
             ],
         ],
+        'time' => [
+            'label' => 'Uhrzeit',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim'
+            ],
+        ],
         'location' => [
             'exclude' => true,
             'label' => 'Location',
@@ -190,7 +198,7 @@ return [
             'label' => 'Preis',
             'config' => [
                 'type' => 'input',
-                'size' => 30,
+                'size' => 50,
                 'eval' => 'trim'
             ],
         ],

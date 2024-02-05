@@ -9,6 +9,9 @@
             <trans-unit id="news.showAll">
                 <source>Show all news</source>
             </trans-unit>
+            <trans-unit id="news.moreInformation">
+                <source>Read more</source>
+            </trans-unit>
             <trans-unit id="concerts.date">
                 <source>Date: </source>
             </trans-unit>
@@ -33,6 +36,12 @@
             <trans-unit id="concerts.filterCategory">
                 <source>Choose a category</source>
             </trans-unit>
+            <trans-unit id="concerts.time">
+                <source>Time of day: </source>
+            </trans-unit>
+            <trans-unit id="concerts.noConcerts">
+                <source>Sorry but there are no concerts available</source>
+            </trans-unit>
             <trans-unit id="footer.newsletterText">
                 <source>All information about the ensemble and upcoming events directly by email.</source>
             </trans-unit>
@@ -51,8 +60,11 @@
             <trans-unit id="footer.newsletterUnsubscribeHint">
                 <source>You can unsubscribe from the newsletter at any time via the link in our newsletter.</source>
             </trans-unit>
+            <trans-unit id="footer.newsLetter.email">
+                <source>E-mail address</source>
+            </trans-unit>
             <trans-unit id="footer.newsletterPrivacy">
-                <source>I would like to receive your newsletter and accept the privacy policy.</source>
+                <source>I would like to receive your newsletter and accept the <![CDATA[<a target="_blank" rel="noopener" href="https://amici.codebomb-websolutions.de/en/privacy">privacy policy</a>]]>.</source>
             </trans-unit>
             <trans-unit id="languages.en">
                 <source>English</source>
@@ -60,11 +72,20 @@
             <trans-unit id="languages.de">
                 <source>Deutsch</source>
             </trans-unit>
-             <trans-unit id="element.consent-declaration.properties.value">
-                <source>Ich habe die <![CDATA[<a target="_blank" rel="noopener" href="https://amici.codebomb-websolutions.de/datenschutz">Datenschutzerklärung</a> gelesen und stimme ihrem Inhalt zu.]]></source>
+            <trans-unit id="label.fileName">
+                <source>File name</source>
             </trans-unit>
-            <trans-unit id="element.consent-declaration.properties.label">
-                <source>Ich habe die <![CDATA[<a target="_blank" rel="noopener" href="https://amici.codebomb-websolutions.de/datenschutz">Datenschutzerklärung</a> gelesen und stimme ihrem Inhalt zu.]]></source>
+            <trans-unit id="label.fileSize">
+                <source>File size</source>
+            </trans-unit>
+            <trans-unit id="label.fileType">
+                <source>File type</source>
+            </trans-unit>
+            <trans-unit id="label.fileChanged">
+                <source>File changed</source>
+            </trans-unit>
+            <trans-unit id="label.downloadButton">
+                <source>Download</source>
             </trans-unit>
         </body>
     </file>

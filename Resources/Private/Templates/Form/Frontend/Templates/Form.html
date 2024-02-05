@@ -5,13 +5,13 @@
                 action="{form.renderingOptions.controllerAction}"
                 method="{form.renderingOptions.httpMethod}"
                 id="{form.identifier}"
-                class="{form.label}"
+                class="{form.label} needs-validation"
                 section="{form.identifier}"
                 enctype="{form.renderingOptions.httpEnctype}"
                 addQueryString="{form.renderingOptions.addQueryString}"
                 argumentsToBeExcludedFromQueryString="{form.renderingOptions.argumentsToBeExcludedFromQueryString}"
                 additionalParams="{form.renderingOptions.additionalParams}"
-                additionalAttributes="{formvh:translateElementProperty(element: form, property: 'fluidAdditionalAttributes')}"
+                additionalAttributes="{formvh:translateElementProperty(element: form, property: 'fluidAdditionalAttributes')}" novalidate="1"
         >
             <f:render partial="{form.currentPage.templateName}" arguments="{page: form.currentPage}" />
             <div class="actions">

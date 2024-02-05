@@ -9,15 +9,15 @@ TCEFORM {
         layout {
             altLabels {
                 0 = normal
-                1 = Light Gray
-                2 = zxv
+                1 = Amici Blue
+                2 = Amici Hellblau
                 3 = xyz
             }
             addItems {
                 #4 = highlighted
                 #                5 = hellgraue Box
             }
-            removeItems = 2,3,4
+            removeItems = 3,4
         }
         # change default headline layout
         header_layout {

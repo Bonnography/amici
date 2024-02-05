@@ -42,14 +42,14 @@
                                                 <div class="sib-input sib-form-block">
                                                     <div class="form__entry entry_block">
                                                         <div class="form__label-row ">
-                                                            <label class="entry__label" for="EMAIL" data-required="*">E-Mail-Adresse</label>
+                                                            <label class="entry__label" for="EMAIL" data-required="*"><f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang.xlf:footer.newsLetter.email"/></label>
 
 
-                                                                <input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="Email-Adresse" data-required="true" required />
+                                                                <input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="{f:translate(key: 'footer.newsLetter.email', extensionName: 'CbTemplate')}" data-required="true" required />
 
 
 
-                                                                <button class="btn btn-secondary" form="sib-form" type="submit">
+                                                                <button class="btn btn-primary" form="sib-form" type="submit">
                                                                     <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
                                                                         <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
                                                                     </svg>
@@ -76,13 +76,13 @@
                                                             <div class="entry__choice">
                                                                 <label>
                                                                     <input type="checkbox" class="input_replaced" value="1" id="OPT_IN" name="OPT_IN" data-required="true" required />
-                                                                    <span class="checkbox checkbox_tick_positive"></span><span><p style="font-size:12px;"><f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang.xlf:footer.newsletterPrivacy"/></p></span>
+                                                                    <span class="checkbox checkbox_tick_positive"></span><span><p style="font-size:13px;"><f:format.raw><f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang.xlf:footer.newsletterPrivacy"/></f:format.raw></p></span>
                                                                 </label>
                                                             </div>
                                                         </div>
                                                         <label class="entry__error entry__error--primary" style="font-size:14px; text-align:left;color:#f82c00;">
                                                         </label>
-                                                        <label class="entry__specification" style="font-size:12px; text-align:left;color:#8390A4; text-align:left">
+                                                        <label class="entry__specification" style="font-size:13px; text-align:left;color:#8390A4; text-align:left">
                                                             <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang.xlf:footer.newsletterUnsubscribeHint"/>
                                                         </label>
                                                     </div>
@@ -109,13 +109,14 @@
                     </div>
                 </div>
                 <div class="row align-items-center copyright-menu-section">
-                    <div class="col-lg-6 order-2 order-lg-1 text-center text-lg-start">
+                    <div class="col-lg-5 order-2 order-lg-1 text-center text-lg-start">
                         <div id="copyright">
                             <f:format.raw>{copyright}</f:format.raw>
                         </div>
                     </div>
-                    <div class="col-lg-6 order-1 order-lg-2 text-lg-end">
+                    <div class="col-lg-7 order-1 order-lg-2 text-lg-end">
                         <f:cObject typoscriptObjectPath="lib.menu-footer" />
+                        <f:format.raw>{menu-language}</f:format.raw>
                     </div>
                 </div>
             </div>
@@ -142,9 +143,8 @@
 
             var AUTOHIDE = Boolean(0);
         </script>
-        <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 
-        <script src="https://www.google.com/recaptcha/api.js?hl=de"></script>
+        <script src="https://www.google.com/recaptcha/api.js?hl=de" defer></script>
 
     </footer>
 </f:section>

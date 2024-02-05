@@ -117,7 +117,7 @@ $GLOBALS['TCA']['tt_content']['palettes']['item_palette']['showitem'] = '
     --linebreak--,
     bodytext;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel,
     --linebreak--, 
-    cta, cta_text
+    cta, cta_text, button_style,
 ';
 
 

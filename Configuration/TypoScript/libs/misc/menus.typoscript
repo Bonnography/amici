@@ -18,6 +18,7 @@ lib.menu-main-fluid {
     partialRootPaths {
         0 = EXT:cb_template/Resources/Private/Partials/Page
     }
+
     dataProcessing {
         10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
         10 {
@@ -25,6 +26,18 @@ lib.menu-main-fluid {
             levels = 3
             includeSpacer = 1
             as = mainnavigation
+        }
+        20 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+        20 {
+            languages = 0, 1
+            as = languageMenu
+        }
+        30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+        30 {
+            special = directory
+            special.value = {$page.metaMenu}
+            includeNotInMenu = 1
+            as = metaMenu
         }
     }
 }
@@ -116,43 +129,8 @@ lib.menu-language {
 
 lib.menu-social-media = COA
 lib.menu-social-media {
-    10 = TEXT
-    10 {
-        value = Linkedin
-        stdWrap {
-            if.isTrue.data = {$company.linkedin}
-            #            outerWrap = <div class="xing">|</div>
-            #            wrap = <span class="fab fa-xing">|</span>
-            required = 1
-            typolink {
-                parameter = {$company.linkedin}
-                extTarget = _blank
-                ATagParams = class="linkedin" rel="noreferrer"
-                wrap = <span>|</span>
-                ATagBeforeWrap = 1
-                title = LinkedIn Link
-            }
-        }
-    }
     20 = TEXT
     20 {
-        value = Xing
-        stdWrap {
-            #            outerWrap = <div class="facebook">|</div>
-
-            if.isTrue.data = {$company.xing}
-            typolink {
-                parameter = {$company.xing}
-                extTarget = _blank
-                ATagParams = class="xing" rel="noreferrer"
-                wrap = <span>|</span>
-                ATagBeforeWrap = 1
-                title = Xing Link
-            }
-        }
-    }
-    30 = TEXT
-    30 {
         value = Facebook
         stdWrap {
             #            outerWrap = <div class="facebook">|</div>
@@ -164,6 +142,23 @@ lib.menu-social-media {
                 wrap = <span>|</span>
                 ATagBeforeWrap = 1
                 title = Facebook Link
+            }
+        }
+    }
+    30 = TEXT
+    30 {
+        value = Instagram
+        stdWrap {
+            #            outerWrap = <div class="instagram">|</div>
+
+            if.isTrue = {$company.instagram}
+            typolink {
+                parameter = {$company.instagram}
+                extTarget = _blank
+                ATagParams = class="instagram" rel="noreferrer"
+                wrap = <span>|</span>
+                ATagBeforeWrap = 1
+                title = Instagram Link
             }
         }
     }

@@ -12,33 +12,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
         f.setAttribute('content', 'width=device-width,initial-scale=1.0,maximum-scale=10.0,user-scalable=1');
     }
 
+    // mobile menu starts
+    let $navIcon = document.getElementById('nav-icon');
 
-    if (g < 1200) {
-        let $navIcon = document.getElementById('nav-icon');
+    if ($navIcon.offsetParent !== 0) {
+        let navMenu = document.getElementById('menu-main');
+        let menu = document.querySelector('.menu-main');
+
         $navIcon.addEventListener("click", function () {
             $navIcon.classList.toggle('open');
-
-            let navMenu = document.getElementById('menu-main');
-            let menu = document.querySelector('.menu-main');
             menu.classList.toggle('d-none');
 
             if (!navMenu.classList.contains('open')) {
                 navMenu.classList.add('open');
-                let height = "100vh";
-
-                setTimeout(function () {
-                    navMenu.style.display = 'flex';
-                    navMenu.style.height = height;
-                }, 0);
-            } else {
-                navMenu.style.height = '0px';
-                navMenu.style.display = 'none';
+                document.body.style.overflow = 'hidden';
+            }  else {
                 navMenu.classList.remove('open');
+                document.body.style.overflow = null;
             }
-            // $('nav#menu-main').toggleClass('open');
-            //$('.menu-main').toggleClass('d-none');
-            //$('nav#menu-main').slideToggle("slow");
-            //$('body').toggleClass('hidden');
         });
 
         let $subMenuOpener = document.querySelectorAll('.w-submenu__opener');
@@ -63,6 +54,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
 
     }
+    // mobile menu ends
+
     document.addEventListener('scroll', function () {
         let headerEl = document.querySelector(".header");
         let body = document.body;
@@ -99,6 +92,30 @@ document.addEventListener("DOMContentLoaded", function(event) {
             perPage: 3,
             perMove: 1,
             autoplay: true,
+            interval: 8000,
+            updateOnMove: true,
+            pagination: false,
+            throttle: 300,
+            breakpoints: {
+                1440: {
+                    perPage: 2,
+                },
+                768: {
+                    perPage: 1,
+                }
+            }
+        }).mount();
+    }
+
+    let imageSlider = document.getElementById("imageSlide");
+
+    if (typeof (imageSlider) != 'undefined' && imageSlider != null)
+    {
+        new Splide('#imageSlide', {
+            type: 'loop',
+            perPage: 4,
+            perMove: 1,
+            autoplay: false,
             interval: 8000,
             updateOnMove: true,
             pagination: false,
@@ -231,13 +248,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         Array.from(document.querySelectorAll(container)).forEach((el,i) => {
             el.style.height = "auto";
-            topPostion = el.offsetTop;
-            if(currentRowStart != topPostion){
+            let topPosition = el.offsetTop;
+            let currentDiv;
+            if(currentRowStart !== topPosition){
                 for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
                     setHeight(rowDivs[currentDiv], currentTallest);
                 }
                 rowDivs.length = 0;
-                currentRowStart = topPostion;
+                currentRowStart = topPosition;
                 currentTallest = parseFloat(getComputedStyle(el, null).height.replace("px", ""));
                 rowDivs.push(el);
             } else {
@@ -251,13 +269,35 @@ document.addEventListener("DOMContentLoaded", function(event) {
     };
     if (g >= 768 && f) {
         window.addEventListener("load", function(){
-            equalheight('.content-column-item .bodytext');
+            equalheight('.content-column-item p');
         });
         window.addEventListener("resize", function(){
             setTimeout(function(){
-                equalheight('.content-column-item .bodytext');
+                equalheight('.content-column-item p');
             });
         });
     }
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict';
 
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        let forms = document.querySelectorAll('.needs-validation');
+        console.log(forms);
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                console.log(form);
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        console.log(form);
+                    }
+
+                    form.classList.add('was-validated');
+                }, false);
+            });
+    })();
 });

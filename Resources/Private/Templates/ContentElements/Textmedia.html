@@ -20,9 +20,9 @@
                 <div class="col-12 order-1">
 
                     <f:if condition="{data.header}">
-                        <f:then>
-                            <f:render partial="Header/Header" arguments="{_all}"/>
-                        </f:then>
+                        <f:render section="Header" optional="true">
+                            <f:render partial="Header/All" arguments="{_all}" />
+                        </f:render>
                     </f:if>
                     <f:if condition="{data.bodytext}">
                         <div class="ce-bodytext {f:if(condition:'{data.text_vertical_center}', then: 'vertical-center', else: '')}">
@@ -62,9 +62,9 @@
         <f:then>
             <div class="ce-bodytext {f:if(condition:'{data.text_vertical_center}', then: 'vertical-center', else: '')}">
                 <f:if condition="{data.header}">
-                    <f:then>
-                        <f:render partial="Header/Header" arguments="{_all}"/>
-                    </f:then>
+                    <f:render section="Header" optional="true">
+                        <f:render partial="Header/All" arguments="{_all}" />
+                    </f:render>
                 </f:if>
                 <f:format.html parseFuncTSPath="lib.parseFunc_RTE"><f:spaceless>{data.bodytext}</f:spaceless></f:format.html>
             </div>

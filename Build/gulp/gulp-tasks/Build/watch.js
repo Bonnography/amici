@@ -9,6 +9,8 @@ var config = require('../../gulpconfig')(),
 function watching () {
     gulp.watch(config.source.scssSelection, gulp.series(clean.css, css.scss));
 
+    gulp.watch(config.source.rteCss, gulp.series(clean.css, css.scss));
+
     gulp.watch(config.source.mainJS, gulp.series(clean.js, js.js));
 
     gulp.watch(config.source.images,

@@ -3,26 +3,38 @@
 <f:layout name="Default"/>
 <f:section name="Main">
     <f:if condition="{data.header}">
-        <f:then>
-            <f:render partial="Header/Header" arguments="{_all}"/>
-        </f:then>
+        <f:render section="Header" optional="true">
+            <f:render partial="Header/All" arguments="{_all}" />
+        </f:render>
     </f:if>
     <f:if condition="{data.relatedNews} == '1'">
         <f:then>
-            <f:variable name="relatedNews" value="{cbw:RelatedNews(newsArray: news)}"/>
-            <f:render section="news" arguments="{news: relatedNews, data: data}"/>
-            <div class="news-showmore text-center">
-                <f:link.page pageUid="{newsListPid}" class="btn btn-secondary">
-                    <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang.xlf:news.showAll"/>
-                </f:link.page>
-            </div>
+            <f:if condition="{news}">
+                <f:then>
+                    <f:variable name="relatedNews" value="{cbw:RelatedNews(newsArray: news)}"/>
+                    <div class="row">
+                        <f:for each="{relatedNews}" as="relatedSingleNews">
+                            <div class="col-12 col-md-6 related-news">
+                                <f:render section="news" arguments="{news: relatedSingleNews, data: data, layout: 'related-news'}"/>
+                            </div>
+                        </f:for>
+                    </div>
+
+                    <div class="news-showmore text-center">
+                        <f:link.page pageUid="{newsListPid}" class="btn btn-secondary">
+                            <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang.xlf:news.showAll"/>
+                        </f:link.page>
+                    </div>
+                </f:then>
+            </f:if>
+
         </f:then>
         <f:else>
             <f:if condition="{news}">
                 <ul class="news-list">
                     <f:for each="{news}" as="news">
                         <li class="news-list-item">
-                            <f:render section="news" arguments="{news: news, data: data}"/>
+                            <f:render section="news" arguments="{news: news, data: data, layout: 'news-list'}"/>
                         </li>
                     </f:for>
                 </ul>
@@ -34,8 +46,7 @@
 
 </f:section>
 <f:section name="news">
-
-    <div class="news-wrapper">
+    <div class="news-wrapper{f:if(condition: '{layout} == \'related-news\'', then: ' news-wrapper-related')}">
         <f:if condition="{news.content}">
             <f:for each="{news.content}" as="contentForImage">
                 <f:if condition="{contentForImage.data.CType} == 'textmedia'">
@@ -45,8 +56,9 @@
                 </f:if>
             </f:for>
             <div class="row">
-                <div class="col-md-4">
+                <div class="{f:if(condition: '{layout} == \'related-news\'', then: 'col-md-5', else:'col-md-4')}">
                     <f:for each="{imageArr}" as="image">
+                        <a href="{news.link}" title="{news.title}">
                         <div class="news-image">
                             <f:media
                                     class="img-fluid "
@@ -56,17 +68,20 @@
                                     alt="{file.alternative}"
                                     title="{file.title}"
                                     loading="{settings.media.lazyLoading}"
-                                    additionalAttributes="{srcset: '{f:uri.image(image: image, maxWidth: 768)} 768w,
-                                    {f:uri.image(image: image, maxWidth: 990)} 990w,
-                                    {f:uri.image(image: image, maxWidth: 1200)} 1200w,
-                                    {f:uri.image(image: image, maxWidth: 1440)} 1440w,
-                                    {f:uri.image(image: image, maxWidth: 1900)} 1900w',
+                                    additionalAttributes="{srcset: '
+                                    {f:uri.image(image: image, maxWidth: 375)} 375w,
+                                    {f:uri.image(image: image, maxWidth: 560)} 768w,
+                                    {f:uri.image(image: image, maxWidth: 375)} 990w,
+                                    {f:uri.image(image: image, maxWidth: 375)} 1200w,
+                                    {f:uri.image(image: image, maxWidth: 300)} 1440w,
+                                    {f:uri.image(image: image, maxWidth: 300)} 1900w',
                            sizes: '(min-width: 1200px) 50vw, 100vw'}"
                             />
                         </div>
+                        </a>
                     </f:for>
                 </div>
-                <div class="col-md-8">
+                <div class="{f:if(condition: '{layout} == \'related-news\'', then: 'col-md-7', else:'col-md-8')}">
                     <div class="news-informations">
                         <p class="news-date">
                             <f:format.date format="d.m.Y">{news.data.crdate}</f:format.date>
@@ -84,8 +99,11 @@
                                 </h3>
                             </f:else>
                         </f:if>
+                        <f:if condition="{news.data.newsTeaser}">
+                            <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{news.data.newsTeaser}</f:format.html>
+                        </f:if>
                         <a href="{news.link}" title="{news.title}">
-                            Mehr Informationen
+                            <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang.xlf:news.moreInformation"/>
                         </a>
                     </div>
                 </div>

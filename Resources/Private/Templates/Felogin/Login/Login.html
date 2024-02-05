@@ -11,7 +11,7 @@
     </p>
 </f:if>
 
-<f:form target="_top" fieldNamePrefix="" action="login" requestToken="{requestToken}" class="loginform" additionalAttributes="{spellcheck: 'false'}">
+<f:form target="_top" fieldNamePrefix="" action="login" requestToken="{requestToken}" class="loginform" additionalAttributes="{spellcheck: 'false', autocomplete:'off'}">
     <f:render section="content" arguments="{_all}"/>
 </f:form>
 
@@ -26,17 +26,19 @@
         <legend>
             <f:translate key="login"/>
         </legend>
-        <div>
+        <div class="form-group">
             <label for="tx-felogin-input-username">
                 <f:translate key="username"/>
-                <f:form.textfield name="user" required="true" additionalAttributes="{autocomplete: 'username'}" id="tx-felogin-input-username"/>
             </label>
+                <f:form.textfield class="form-control" name="user" required="true" additionalAttributes="{autocomplete: 'username'}" id="tx-felogin-input-username"/>
+
         </div>
-        <div>
+        <div class="form-group">
             <label for="tx-felogin-input-password">
                 <f:translate key="password"/>
-                <f:form.password name="pass" additionalAttributes="{required: 'required', autocomplete: 'current-password'}" id="tx-felogin-input-password"/>
             </label>
+                <f:form.password class="form-control" name="pass" additionalAttributes="{required: 'required', autocomplete: 'current-password'}" id="tx-felogin-input-password"/>
+
         </div>
 
         <f:if condition="{permaloginStatus} > -1">
@@ -57,8 +59,8 @@
             </div>
         </f:if>
 
-        <div>
-            <f:form.submit value="{f:translate(key: 'login')}" name="submit" class="btn btn-primary" />
+        <div class="d-flex justify-content-end">
+            <f:form.submit value="{f:translate(key: 'submit_btn')}" name="submit" class="btn btn-primary" />
         </div>
 
         <div class="felogin-hidden">

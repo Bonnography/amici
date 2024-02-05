@@ -94,7 +94,7 @@ lib.parseFunc_RTE {
             nonWrappedTag = P
             innerStdWrap_all.ifBlank = &nbsp;
             // disable the default bodytext class:
-            addAttributes.P.class = bodytext
+            #addAttributes.P.class = bodytext
             # addAttributes.P.class.setOnly=blank
         }
     }
