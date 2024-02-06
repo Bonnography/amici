@@ -18,7 +18,7 @@ finishers:
       translation:
         language: Default
       title: ''
-      templateName: 'Default'
+      templateName: Default
       templateRootPaths:
         10: 'EXT:cb_template/Resources/Private/Templates/Form/Frontend/Templates/Finishers/Email/Admin/'
     identifier: EmailToReceiver
@@ -32,7 +32,7 @@ finishers:
       addHtmlPart: true
       attachUploads: true
       title: ''
-      templateName: 'Default'
+      templateName: Default
       templateRootPaths:
         10: 'EXT:cb_template/Resources/Private/Templates/Form/Frontend/Templates/Finishers/Email/User/'
     identifier: EmailToSender
@@ -105,8 +105,8 @@ renderables:
                 Tenor: Tenor
                 Bariton: Bariton
                 Bass: Bass
-                'Violine-1': 'Violine 1'
-                'Violine-2': 'Violine 2'
+                Violine-1: 'Violine 1'
+                Violine-2: 'Violine 2'
                 Bratsche: Bratsche
                 Cello: Cello
                 Kontrabass: Kontrabass
@@ -128,17 +128,19 @@ renderables:
         type: RadioButton
         identifier: experience-radio
         label: 'Du hast bereits Chor-/Ensemble- oder Orchester-Erfahrung?'
-      - defaultValue: ''
+      -
+        defaultValue: ''
         type: Textarea
         identifier: message
-        label: Bitte erläutere uns kurz deine Vorerfahrung.
+        label: 'Bitte erläutere uns kurz deine Vorerfahrung.'
         properties:
-          elementClassAttribute: message-if-previous-experience hide
+          elementClassAttribute: 'message-if-previous-experience hide'
           fluidAdditionalAttributes:
             minlength: '0'
             maxlength: '500'
         validators:
-          - options:
+          -
+            options:
               minimum: '0'
               maximum: '500'
             identifier: StringLength
@@ -151,7 +153,7 @@ renderables:
             defaultValue: ''
             type: Email
             identifier: email
-            label: 'E-Mail-Adresse'
+            label: E-Mail-Adresse
             properties:
               fluidAdditionalAttributes:
                 required: required
@@ -194,3 +196,12 @@ renderables:
         validators:
           -
             identifier: NotEmpty
+      -
+        renderingOptions:
+          doNotShowLabel: true
+        validators:
+          -
+            identifier: Recaptcha
+        type: Recaptcha
+        identifier: recaptcha-1
+        label: reCAPTCHA

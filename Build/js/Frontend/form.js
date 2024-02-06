@@ -23,7 +23,7 @@ class Recaptcha {
         if (!this.currentForm.checkValidity()) {
             let list = this.currentForm.querySelectorAll(':invalid');
             for (let item of list) {
-                item.parentElement.classList.add("invalid")
+                item.closest(".input").classList.add("invalid");
             }
             event.preventDefault();
             event.stopPropagation();
