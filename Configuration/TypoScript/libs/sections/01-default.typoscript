@@ -35,5 +35,11 @@ page {
     [else]
     page.bodyTagAdd = id="sub"
 [end]
-
+[applicationContext == 'Development/Staging']
+    page.headerData.5 = TEXT
+    page.headerData.5.value (
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="4eba13c4-4a7e-40ce-be75-f1c6b5d3309f" data-blockingmode="auto" type="text/javascript">
+</script>
+    )
+[end]
 

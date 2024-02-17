@@ -10,7 +10,7 @@ finishers:
     options:
       subject: 'Nachricht vom amici musicae Registrierungsformular'
       recipients:
-        info@codebomb-websolutions.de: CBW
+        info@codebomb-websolutions.de: 'amici musicae'
       senderAddress: '{email}'
       senderName: '{firstname} {lastname}'
       addHtmlPart: true
@@ -27,8 +27,8 @@ finishers:
       subject: 'Registrierung über das amici musicae Registrierungsformular'
       recipients:
         '{email}': '{firstname} {lastname}'
-      senderAddress: info@codebomb-websolutions.de
-      senderName: CBW
+      senderAddress: noreply@amici-musicae.de
+      senderName: 'amici musicae'
       addHtmlPart: true
       attachUploads: true
       title: ''

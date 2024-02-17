@@ -55,7 +55,7 @@ lib.header-Data {
         file = EXT:cb_template/Resources/Private/Templates/Page/HeadIcons.html
     }
 }
-[applicationContext == 'Development' || 'Development/Testing']
+[applicationContext == 'Development' || 'Development/Testing' || 'Development/Staging']
     page {
         meta {
             robots   = noindex,nofollow
