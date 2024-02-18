@@ -54,10 +54,10 @@
            <trans-unit id="element.experience-radio.properties.label">
                <source>Do you already have choir/ensemble or orchestra experience?</source>
            </trans-unit>
-           <trans-unit id="element.experience-radio.properties.options.Ja">
+           <trans-unit id="element.experience-radio.properties.options.0">
                <source>Yes</source>
            </trans-unit>
-           <trans-unit id="element.experience-radio.properties.options.Nein">
+           <trans-unit id="element.experience-radio.properties.options.1">
                <source>No</source>
            </trans-unit>
            <trans-unit id="element.message-contact-form.properties.placeholder">

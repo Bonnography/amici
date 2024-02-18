@@ -277,4 +277,32 @@ document.addEventListener("DOMContentLoaded", function(event) {
             });
         });
     }
+
+    if (document.querySelector('.amici-registrationform').length) {
+        let rdBtn = document.querySelector(".message-if-previous-experience-radio");
+        let radios = rdBtn.querySelectorAll("input[type='radio']");
+        let experienceMessage = document.querySelectorAll('.message-if-previous-experience');
+        radios.forEach(radio => {
+            radio.addEventListener('click', function () {
+                let radioVal = radio.value;
+                if (radioVal === '0') {
+                    experienceMessage.forEach((messageItem) => {
+                        messageItem.classList.remove('hide');
+                        document.querySelector('textarea').setAttribute("required", true);
+                    });
+                } else {
+                    experienceMessage.forEach((messageItem) => {
+                        if (!messageItem.classList.contains('hide')) {
+                            messageItem.classList.add('hide');
+                            document.querySelector('textarea').removeAttribute("required");
+                        }
+                    });
+                }
+            });
+        });
+
+
+
+
+    }
 });

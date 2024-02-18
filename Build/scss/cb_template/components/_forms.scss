@@ -362,6 +362,9 @@ input:-moz-placeholder {
     font-size: 1.25rem;
   }
 
+  .message-if-previous-experience.hide {
+    display: none;
+  }
   .radio-buttons {
     .form-check {
       padding-left: 1.5em;

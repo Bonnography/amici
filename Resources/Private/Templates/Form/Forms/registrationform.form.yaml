@@ -122,9 +122,10 @@ renderables:
                 identifier: NotEmpty
       -
         properties:
+          containerClassAttribute: 'message-if-previous-experience-radio'
           options:
-            Ja: Ja
-            Nein: Nein
+            0: Ja
+            1: Nein
         type: RadioButton
         identifier: experience-radio
         label: 'Du hast bereits Chor-/Ensemble- oder Orchester-Erfahrung?'
@@ -135,6 +136,7 @@ renderables:
         label: 'Bitte erläutere uns kurz deine Vorerfahrung.'
         properties:
           elementClassAttribute: 'message-if-previous-experience hide'
+          labelClassAttribute: 'message-if-previous-experience hide'
           fluidAdditionalAttributes:
             minlength: '0'
             maxlength: '500'

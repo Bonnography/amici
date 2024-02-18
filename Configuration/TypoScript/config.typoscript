@@ -58,7 +58,7 @@ config {
     ## language
     language = de
     ## default language
-    locale_all = de_DE.UTF8
+    locale_all = de_DE.UTF-8
     htmlTag_setParams = lang="de" dir="ltr"
 
     #Headers for Website
@@ -73,11 +73,4 @@ config {
     ## check rootline for crosslinking in multidomain
     typolinkCheckRootline = 94
     typolinkEnableLinksAcrossDomains = 1
-}
-plugin.tx_form.settings.yamlConfigurations {
-    100 = EXT:cb_template/Configuration/Form/CustomFormSetup.yaml
-}
-
-module.tx_form.settings.yamlConfigurations {
-    100 = EXT:cb_template/Configuration/Form/CustomFormSetup.yaml
 }

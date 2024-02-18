@@ -18716,6 +18716,8 @@ input:-moz-placeholder {
   .amici-contaktform .form-label, .amici-registrationform .form-label, .loginform .form-label {
     margin-bottom: .75rem;
     font-size: 1.25rem; }
+  .amici-contaktform .message-if-previous-experience.hide, .amici-registrationform .message-if-previous-experience.hide, .loginform .message-if-previous-experience.hide {
+    display: none; }
   .amici-contaktform .radio-buttons .form-check, .amici-registrationform .radio-buttons .form-check, .loginform .radio-buttons .form-check {
     padding-left: 1.5em;
     display: inline-block; }

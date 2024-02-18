@@ -4,7 +4,6 @@
         language = en
         locale_all = en_US.UTF_8
         htmlTag_setParams = lang="en" dir="ltr"
-
         sys_language_mode = strict
     }
 [END]

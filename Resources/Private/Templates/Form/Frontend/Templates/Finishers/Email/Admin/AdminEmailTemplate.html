@@ -24,11 +24,22 @@
                         <f:then>
                             <f:if condition="{formValue.isMultiValue}">
                                 <f:then>
-                                    <ul>
-                                        <f:for each="{formValue.processedValue}" as="value">
-                                            <li>{value}</li>
-                                        </f:for>
-                                    </ul>
+                                    <f:if condition="{form.formState.formValues.discover-multi-checkbox}">
+                                        <f:then>
+                                            <ul>
+                                                <f:for each="{form.formState.formValues.discover-multi-checkbox}" as="multiCheckbox">
+                                                    <li><f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:element.discover-multi-checkbox.properties.options.{multiCheckbox}"/></li>
+                                                </f:for>
+                                            </ul>
+                                        </f:then>
+                                        <f:else>
+                                            <ul>
+                                                <f:for each="{formValue.processedValue}" as="value">
+                                                    <li>{value}</li>
+                                                </f:for>
+                                            </ul>
+                                        </f:else>
+                                    </f:if>
                                 </f:then>
                                 <f:else>
                                     <table cellspacing="0" border="0">
@@ -42,7 +53,14 @@
                                                         </f:if>
                                                     </f:then>
                                                     <f:else>
-                                                        <f:format.nl2br>{formValue.processedValue}</f:format.nl2br>
+                                                        <f:if condition="{formValue.element.identifier} == 'vocal-group'">
+                                                            <f:then>
+                                                                <f:if condition="{form.formState.formValues.vocal-group}">{form.formState.formValues.vocal-group}</f:if>
+                                                            </f:then>
+                                                            <f:else>
+                                                                <f:format.nl2br>{formValue.processedValue}</f:format.nl2br>
+                                                            </f:else>
+                                                        </f:if>
                                                     </f:else>
                                                 </f:if>
                                             </td>
@@ -52,7 +70,14 @@
                             </f:if>
                         </f:then>
                         <f:else>
-                            -
+                            <f:if condition="{formValue.element.identifier} == 'experience-radio'">
+                                <f:then>
+                                    {formValue.processedValue}
+                                </f:then>
+                                <f:else>
+                                    -
+                                </f:else>
+                            </f:if>
                         </f:else>
 
                     </f:if>
