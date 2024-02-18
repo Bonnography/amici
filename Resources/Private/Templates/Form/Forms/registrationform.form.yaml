@@ -11,7 +11,7 @@ finishers:
       subject: 'Nachricht vom amici musicae Registrierungsformular'
       recipients:
         info@codebomb-websolutions.de: 'amici musicae'
-      senderAddress: '{email}'
+      senderAddress: 'noreply@amici-musicae.de'
       senderName: '{firstname} {lastname}'
       addHtmlPart: true
       attachUploads: true
