@@ -2,32 +2,20 @@
 
 company {
     # cat=basic/SocialMedia/10; type=string; label=Facebook
-    facebook = https://www.facebook.com/avedo
-    # cat=basic/SocialMedia/20; type=string; label=Instagram
-    instagram = https://www.instagram.com/avedo_deutschland
-    # cat=basic/SocialMedia/30; type=string; label=Kununu
-    kununu = https://www.kununu.com/de/avedo
+    facebook = https://www.facebook.com/amicimusicae
     # cat=basic/SocialMedia/40; type=string; label=Favicon
-    favicon = EXT:stroeerx_template/Resources/Public/images/favicon.ico
+    favicon = typo3conf/ext/cb_template/Resources/Public/images/favicon.ico
 }
-
-
 
 [applicationContext == 'Development']
-    @import 'EXT:stroeerx_template/Configuration/TypoScript/main/applicationContext/development.typoscript'
+    @import 'EXT:cb_template/Configuration/TypoScript/main/applicationContext/development.typoscript'
 [end]
 [applicationContext == 'Development/Testing']
-    @import 'EXT:stroeerx_template/Configuration/TypoScript/main/applicationContext/testing.typoscript'
+    @import 'EXT:cb_template/Configuration/TypoScript/main/applicationContext/testing.typoscript'
 [end]
 [applicationContext == 'Development/Staging']
-    @import 'EXT:stroeerx_template/Configuration/TypoScript/main/applicationContext/testing.typoscript'
+    @import 'EXT:cb_template/Configuration/TypoScript/main/applicationContext/testing.typoscript'
 [end]
 [applicationContext == 'Production']
-    @import 'EXT:stroeerx_template/Configuration/TypoScript/main/applicationContext/production.typoscript'
+    @import 'EXT:cb_template/Configuration/TypoScript/main/applicationContext/production.typoscript'
 [end]
-
-seo {
-    GTM =
-}
-
-language.file = EXT:stroeerx_template/Resources/Private/Language/locallang.xlf

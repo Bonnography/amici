@@ -18,9 +18,9 @@ finishers:
       translation:
         language: Default
       title: ''
-      templateName: Default
+      templateName: AdminEmailTemplate
       templateRootPaths:
-        10: 'EXT:cb_template/Resources/Private/Templates/Form/Frontend/Templates/Finishers/Email/Admin/'
+        20: 'EXT:cb_template/Resources/Private/Templates/Form/Frontend/Templates/Finishers/Email/Admin/'
     identifier: EmailToReceiver
   -
     options:
@@ -32,9 +32,9 @@ finishers:
       addHtmlPart: true
       attachUploads: true
       title: ''
-      templateName: Default
+      templateName: UserEmailTemplate
       templateRootPaths:
-        10: 'EXT:cb_template/Resources/Private/Templates/Form/Frontend/Templates/Finishers/Email/User/'
+        20: 'EXT:cb_template/Resources/Private/Templates/Form/Frontend/Templates/Finishers/Email/User/'
     identifier: EmailToSender
   -
     options:
