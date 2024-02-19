@@ -63,6 +63,12 @@ renderables:
             properties:
               fluidAdditionalAttributes:
                 placeholder: Vorname
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xs:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '12'
           -
             defaultValue: ''
             type: Text
@@ -73,6 +79,12 @@ renderables:
               fluidAdditionalAttributes:
                 required: required
                 placeholder: Nachname
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xs:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '12'
             validators:
               -
                 identifier: NotEmpty
@@ -90,6 +102,12 @@ renderables:
                 step: 1
                 required: required
               elementDescription: ''
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xs:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '12'
             type: Date
             identifier: birthdate
             label: Geburtsdatum
@@ -114,6 +132,12 @@ renderables:
               fluidAdditionalAttributes:
                 required: required
               prependOptionLabel: 'Bitte wählen'
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xs:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '12'
             type: SingleSelect
             identifier: vocal-group
             label: 'Register | Stimmgruppe'
@@ -160,6 +184,12 @@ renderables:
               fluidAdditionalAttributes:
                 required: required
                 placeholder: 'E-Mail*'
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xs:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '12'
             validators:
               -
                 identifier: EmailAddress
@@ -174,6 +204,12 @@ renderables:
               elementDescription: ''
               fluidAdditionalAttributes:
                 placeholder: Telefon
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xs:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '12'
       -
         properties:
           options:

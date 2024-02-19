@@ -1,8 +1,18 @@
 [applicationContext == 'Development']
     config.absRefPrefix = /
     config.admPanel = 1
+    config.contentObjectExeptionHandler = 0
 [end]
-
+[applicationContext == 'Development/Staging']
+    config.absRefPrefix = /
+    config.admPanel = 1
+    config.contentObjectExeptionHandler = 1
+[end]
+[applicationContext == 'Production']
+    config.absRefPrefix = /
+    config.admPanel = 0
+    config.contentObjectExeptionHandler = 1
+[end]
 config {
     ## enable indexing for indexed search
     index_enable = 1
@@ -69,8 +79,4 @@ config {
     additionalHeaders.40.header = X-Content-Type-Options: nosniff
     additionalHeaders.50.header = Permissions-Policy: geolocation=(), midi=(), camera=(), usb=(), magnetometer=(), accelerometer=(), vr=(), speaker=(), ambient-light-sensor=(), gyroscope=(), microphone=()
     additionalHeaders.60.header = Referrer-Policy:strict-origin-when-cross-origin
-
-    ## check rootline for crosslinking in multidomain
-    typolinkCheckRootline = 94
-    typolinkEnableLinksAcrossDomains = 1
 }

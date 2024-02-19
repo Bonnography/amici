@@ -11,10 +11,10 @@ company {
     @import 'EXT:cb_template/Configuration/TypoScript/main/applicationContext/development.typoscript'
 [end]
 [applicationContext == 'Development/Testing']
-    @import 'EXT:cb_template/Configuration/TypoScript/main/applicationContext/testing.typoscript'
+    @import 'EXT:cb_template/Configuration/TypoScript/main/applicationContext/development.typoscript'
 [end]
 [applicationContext == 'Development/Staging']
-    @import 'EXT:cb_template/Configuration/TypoScript/main/applicationContext/testing.typoscript'
+    @import 'EXT:cb_template/Configuration/TypoScript/main/applicationContext/development.typoscript'
 [end]
 [applicationContext == 'Production']
     @import 'EXT:cb_template/Configuration/TypoScript/main/applicationContext/production.typoscript'
