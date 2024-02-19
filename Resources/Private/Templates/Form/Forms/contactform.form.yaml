@@ -22,6 +22,9 @@ finishers:
       templateName: AdminEmailTemplate
       templateRootPaths:
         20: 'EXT:cb_template/Resources/Private/Templates/Form/Frontend/Templates/Finishers/Email/Admin/'
+      carbonCopyRecipients:
+        heiko.paulick@gmail.com: 'Heiko Paulick'
+        felix.lingath@amici-musicae.de: 'Felix Lingath'
     identifier: EmailToReceiver
   -
     options:
