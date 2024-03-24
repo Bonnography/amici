@@ -16046,7 +16046,7 @@ ul
    padding-left: 0;
 }
 
-p ul, .text-bodytext ul
+p ul, .text-bodytext ul, .ce-bodytext ul
 {
    padding-left: 20px;
 }
@@ -18704,40 +18704,40 @@ input:-moz-placeholder {
 .form-group {
   margin-bottom: 1rem; }
 
-.amici-contaktform label.form-label {
+.amici-contactform label.form-label {
   display: none; }
 
-.amici-contaktform, .amici-registrationform, .loginform {
+.amici-contactform, .amici-registrationform, .loginform {
   padding: 40px 30px;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.05);
   margin-bottom: 30px; }
-  .amici-contaktform .form-check, .amici-registrationform .form-check, .loginform .form-check {
+  .amici-contactform .form-check, .amici-registrationform .form-check, .loginform .form-check {
     padding-left: 0; }
-  .amici-contaktform .form-label, .amici-registrationform .form-label, .loginform .form-label {
+  .amici-contactform .form-label, .amici-registrationform .form-label, .loginform .form-label {
     margin-bottom: .75rem;
     font-size: 1.25rem; }
-  .amici-contaktform .message-if-previous-experience.hide, .amici-registrationform .message-if-previous-experience.hide, .loginform .message-if-previous-experience.hide {
+  .amici-contactform .message-if-previous-experience.hide, .amici-registrationform .message-if-previous-experience.hide, .loginform .message-if-previous-experience.hide {
     display: none; }
-  .amici-contaktform .radio-buttons .form-check, .amici-registrationform .radio-buttons .form-check, .loginform .radio-buttons .form-check {
+  .amici-contactform .radio-buttons .form-check, .amici-registrationform .radio-buttons .form-check, .loginform .radio-buttons .form-check {
     padding-left: 1.5em;
     display: inline-block; }
-    .amici-contaktform .radio-buttons .form-check:first-child, .amici-registrationform .radio-buttons .form-check:first-child, .loginform .radio-buttons .form-check:first-child {
+    .amici-contactform .radio-buttons .form-check:first-child, .amici-registrationform .radio-buttons .form-check:first-child, .loginform .radio-buttons .form-check:first-child {
       margin-right: 20px; }
-  .amici-contaktform input, .amici-registrationform input, .loginform input {
+  .amici-contactform input, .amici-registrationform input, .loginform input {
     border-color: transparent;
     background: #d7d3eb; }
-  .amici-contaktform .input .form-control, .amici-registrationform .input .form-control, .loginform .input .form-control {
+  .amici-contactform .input .form-control, .amici-registrationform .input .form-control, .loginform .input .form-control {
     border-radius: 0;
     width: 100%;
     color: var(--bs-body-color);
     -webkit-appearance: auto;
     -moz-appearance: auto;
     appearance: auto; }
-    .amici-contaktform .input .form-control:focus, .amici-registrationform .input .form-control:focus, .loginform .input .form-control:focus {
+    .amici-contactform .input .form-control:focus, .amici-registrationform .input .form-control:focus, .loginform .input .form-control:focus {
       border-color: #080232;
       box-shadow: unset;
       outline: 0; }
-  .amici-contaktform .input .form-check .declaration .form-check-input, .amici-registrationform .input .form-check .declaration .form-check-input, .loginform .input .form-check .declaration .form-check-input {
+  .amici-contactform .input .form-check .declaration .form-check-input, .amici-registrationform .input .form-check .declaration .form-check-input, .loginform .input .form-check .declaration .form-check-input {
     margin-top: 0;
     margin-left: 0;
     float: unset;
@@ -18746,27 +18746,27 @@ input:-moz-placeholder {
     height: 0.825em;
     border: var(--bs-border-width) solid rgba(0, 0, 0, 0.5);
     border-radius: .15em; }
-  .amici-contaktform .input textarea.form-control, .amici-registrationform .input textarea.form-control, .loginform .input textarea.form-control {
+  .amici-contactform .input textarea.form-control, .amici-registrationform .input textarea.form-control, .loginform .input textarea.form-control {
     background: #d7d3eb; }
-  .amici-contaktform .input.checkbox label, .amici-registrationform .input.checkbox label, .loginform .input.checkbox label {
+  .amici-contactform .input.checkbox label, .amici-registrationform .input.checkbox label, .loginform .input.checkbox label {
     padding-left: 0; }
-  .amici-contaktform .input .checkbox-label, .amici-registrationform .input .checkbox-label, .loginform .input .checkbox-label {
+  .amici-contactform .input .checkbox-label, .amici-registrationform .input .checkbox-label, .loginform .input .checkbox-label {
     display: block;
     margin-left: 25px; }
-  .amici-contaktform .actions, .amici-registrationform .actions, .loginform .actions {
+  .amici-contactform .actions, .amici-registrationform .actions, .loginform .actions {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     text-align: right; }
-    .amici-contaktform .actions .btn-group, .amici-registrationform .actions .btn-group, .loginform .actions .btn-group {
+    .amici-contactform .actions .btn-group, .amici-registrationform .actions .btn-group, .loginform .actions .btn-group {
       display: block; }
-  .amici-contaktform .form-check-label, .amici-registrationform .form-check-label, .loginform .form-check-label {
+  .amici-contactform .form-check-label, .amici-registrationform .form-check-label, .loginform .form-check-label {
     display: flex;
     align-items: center; }
-    .amici-contaktform .form-check-label p, .amici-contaktform .form-check-label span, .amici-registrationform .form-check-label p, .amici-registrationform .form-check-label span, .loginform .form-check-label p, .loginform .form-check-label span {
+    .amici-contactform .form-check-label p, .amici-contactform .form-check-label span, .amici-registrationform .form-check-label p, .amici-registrationform .form-check-label span, .loginform .form-check-label p, .loginform .form-check-label span {
       margin-bottom: 0;
       margin-left: 10px; }
-  .amici-contaktform .declaration span, .amici-registrationform .declaration span, .loginform .declaration span {
+  .amici-contactform .declaration span, .amici-registrationform .declaration span, .loginform .declaration span {
     margin: 0; }
 
 .was-validated .input .form-check .declaration .form-check-input:invalid {
@@ -18775,10 +18775,24 @@ input:-moz-placeholder {
 .was-validated .input .form-check .declaration .form-check-input:invalid + p {
   color: var(--bs-form-invalid-border-color); }
 
+.was-validated .input.checkbox.invalid p {
+  color: red; }
+  .was-validated .input.checkbox.invalid p a {
+    color: red; }
+
+.was-validated .input.checkbox.invalid .invalid-feedback {
+  display: block; }
+
+.was-validated .recaptcha.invalid iframe {
+  border: 2px solid red; }
+
+.was-validated .recaptcha.invalid .invalid-feedback {
+  display: block; }
+
 @media (min-width: 768px) {
-  .amici-contaktform .input.checkbox, .amici-registrationform .input.checkbox {
+  .amici-contactform .input.checkbox, .amici-registrationform .input.checkbox {
     width: 75%; } }
 
 @media (min-width: 992px) {
-  .amici-contaktform .input textarea.form-control, .amici-registrationform .input textarea.form-control {
+  .amici-contactform .input textarea.form-control, .amici-registrationform .input textarea.form-control {
     min-height: 150px; } }

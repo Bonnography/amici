@@ -12,7 +12,8 @@ finishers:
       recipients:
         info@codebomb-websolutions.de: 'amici musicae'
       senderAddress: 'noreply@amici-musicae.de'
-      senderName: '{firstname} {lastname}'
+      senderName: 'amici musciae'
+      replyTo: '{email}'
       addHtmlPart: true
       attachUploads: true
       translation:
@@ -65,6 +66,7 @@ renderables:
             label: Vorname
             properties:
               fluidAdditionalAttributes:
+                required: required
                 placeholder: Vorname
               gridColumnClassAutoConfiguration:
                 viewPorts:
@@ -72,6 +74,9 @@ renderables:
                     numbersOfColumnsToUse: '12'
                   sm:
                     numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: NotEmpty
           -
             defaultValue: ''
             type: Text

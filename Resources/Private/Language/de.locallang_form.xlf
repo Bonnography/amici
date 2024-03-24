@@ -124,10 +124,10 @@
                <target>Absenden</target>
            </trans-unit>
            <trans-unit id="element.consent-declaration.properties.value">
-               <target>Ich habe die <![CDATA[<a target="_blank" rel="noopener" href="https://amici.codebomb-websolutions.de/datenschutz">Datenschutzerklärung</a> gelesen und stimme ihrem Inhalt zu.]]></target>
+               <target>Ich habe die <![CDATA[<a target="_blank" rel="noopener" href="https://relaunch.amici-musicae.de/datenschutz">Datenschutzerklärung</a> gelesen und stimme ihrem Inhalt zu.]]></target>
            </trans-unit>
            <trans-unit id="element.consent-declaration.properties.label">
-               <target>Ich habe die <![CDATA[<a target="_blank" rel="noopener" href="https://amici.codebomb-websolutions.de/datenschutz">Datenschutzerklärung</a> gelesen und stimme ihrem Inhalt zu.]]></target>
+               <target>Ich habe die <![CDATA[<a target="_blank" rel="noopener" href="https://relaunch.amici-musicae.de/datenschutz">Datenschutzerklärung</a> gelesen und stimme ihrem Inhalt zu.]]></target>
            </trans-unit>
            <trans-unit id="form.confirmation.yourMessage">
               <target>Ihre Nachricht</target>
@@ -143,6 +143,36 @@
           </trans-unit>
            <trans-unit id="form.confirmation.registrationForm.data">
               <target>Folgende Daten wurden erfolgreich übermittelt:</target>
+          </trans-unit>
+           <trans-unit id="form.validation.Text">
+              <target>Bitte ausfüllen</target>
+          </trans-unit>
+           <trans-unit id="form.validation.Textarea">
+              <target>Bitte ausfüllen</target>
+          </trans-unit>
+           <trans-unit id="form.validation.Email">
+              <target>Bitte ausfüllen</target>
+          </trans-unit>
+           <trans-unit id="form.validation.Phone">
+              <target>Bitte ausfüllen</target>
+          </trans-unit>
+           <trans-unit id="form.validation.Date">
+              <target>Bitte ausfüllen</target>
+          </trans-unit>
+           <trans-unit id="form.validation.SingleSelect">
+              <target>Bitte auswählen</target>
+          </trans-unit>
+           <trans-unit id="form.validation.RadioButton">
+              <target>Bitte auswählen</target>
+          </trans-unit>
+           <trans-unit id="form.validation.MultiCheckbox">
+              <target>Bitte auswählen</target>
+          </trans-unit>
+           <trans-unit id="form.validation.Checkbox">
+              <target>Bitte ankreuzen</target>
+          </trans-unit>
+           <trans-unit id="form.validation.Recaptcha">
+              <target>Bitte ankreuzen</target>
           </trans-unit>
         </body>
     </file>

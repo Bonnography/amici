@@ -23,15 +23,17 @@
         <f:if condition="{form.formState.formValues.vocal-group}"><br><f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:element.vocal-group.properties.label"/>: {form.formState.formValues.vocal-group}</f:if>
         <f:if condition="{form.formState.formValues.birthdate}"><br><f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:element.birthdate.properties.label"/>: <f:format.date format="%d. %B %Y">{form.formState.formValues.birthdate}</f:format.date></f:if>
         <br />
-        <f:if condition="{form.formState.formValues.experience-radio} == '0'">
-            <f:then>
-                <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:experience-radio.email.label"/>
-                <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:element.experience-radio.properties.options.0"/>
-            </f:then>
-            <f:else>
-                <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:experience-radio.email.label"/>
-                <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:element.experience-radio.properties.options.1"/>
-            </f:else>
+        <f:if condition="{form.formState.formValues.experience-radio}">
+            <f:if condition="{form.formState.formValues.experience-radio} == '0'">
+                <f:then>
+                    <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:experience-radio.email.label"/>
+                    <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:element.experience-radio.properties.options.0"/>
+                </f:then>
+                <f:else>
+                    <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:experience-radio.email.label"/>
+                    <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:element.experience-radio.properties.options.1"/>
+                </f:else>
+            </f:if>
         </f:if>
         <f:if condition="{form.formState.formValues.message}">
             <br />

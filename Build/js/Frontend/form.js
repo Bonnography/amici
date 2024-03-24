@@ -22,16 +22,26 @@ class Recaptcha {
         this.currentForm = event.target.closest('form');
         if (!this.currentForm.checkValidity()) {
             let list = this.currentForm.querySelectorAll(':invalid');
+
             for (let item of list) {
                 item.closest(".input").classList.add("invalid");
+            }
+            if (grecaptcha.getResponse() == '') {
+                this.currentForm.querySelector('.hiddenRecaptcha').closest('.recaptcha').classList.add("invalid");
             }
             event.preventDefault();
             event.stopPropagation();
         } else {
-            event.target.closest('form').submit();
+            if (grecaptcha.getResponse() == '') {
+                this.currentForm.querySelector('.hiddenRecaptcha').closest('.recaptcha').classList.add("invalid");
+                event.preventDefault();
+                event.stopPropagation();
+            } else {
+                event.target.closest('form').submit();
+            }
         }
-        this.currentForm.classList.add('was-validated');
 
+        this.currentForm.classList.add('was-validated');
     }
 
     invisibleRecaptchaButtonClicked(event) {
@@ -70,6 +80,11 @@ class Recaptcha {
 
     recaptchaConfirmed(recaptchaResponse) {
         document.querySelector('[data-recaptcha-form-field]').value = recaptchaResponse;
+        let recaptchaSelector = document.querySelector('.recaptcha');
+        console.log(recaptchaSelector);
+        if (recaptchaSelector.classList.contains('invalid')) {
+            recaptchaSelector.classList.remove('invalid');
+        }
     }
 
     recaptchaExpired() {

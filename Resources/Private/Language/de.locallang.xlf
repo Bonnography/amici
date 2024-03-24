@@ -64,7 +64,7 @@
                 <target>Sie können den Newsletter jederzeit über den Link in unserem Newsletter abbestellen.</target>
             </trans-unit>
             <trans-unit id="footer.newsletterPrivacy">
-                <target>Ich möchte Ihren Newsletter erhalten und akzeptiere die <![CDATA[<a target="_blank" rel="noopener" href="https://amici.codebomb-websolutions.de/datenschutz">Datenschutzerklärung</a>]]>.</target>
+                <target>Ich möchte Ihren Newsletter erhalten und akzeptiere die <![CDATA[<a target="_blank" rel="noopener" href="https://amici-musicae.de/datenschutz">Datenschutzerklärung</a>]]>.</target>
             </trans-unit>
             <trans-unit id="languages.en">
                 <target>English</target>

@@ -19,7 +19,7 @@ tt_content {
             10 {
                 special = directory
                 special.value.field = pages
-                alternativeSortingField = crdate DESC
+                alternativeSortingField = starttime DESC
                 as = news
                 dataProcessing {
                     10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor

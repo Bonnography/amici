@@ -1,12 +1,11 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers" data-namespace-typo3-fluid="true">
 <div id="{form.identifier}" class="mb-5">
-
-    <f:if condition="{form.identfier} == 'amici-contactform'">
+    <f:if condition="{form.label} == 'amici-contactform'">
         <h3><f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:form.confirmation.contactForm.header"/></h3>
         <p><f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:form.confirmation.contactForm.data"/></p>
     </f:if>
 
-    <f:if condition="{form.identfier} == 'amici-registration'">
+    <f:if condition="{form.label} == 'amici-registrationform'">
         <h3><f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:form.confirmation.registrationForm.header"/></h3>
         <p><f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:form.confirmation.registrationForm.data"/></p>
     </f:if>
@@ -19,19 +18,21 @@
         <f:if condition="{form.formState.formValues.vocal-group}"><br><f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:element.vocal-group.properties.label"/>: {form.formState.formValues.vocal-group}</f:if>
         <f:if condition="{form.formState.formValues.birthdate}"><br><f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:element.birthdate.properties.label"/>: <f:format.date format="%d. %B %Y">{form.formState.formValues.birthdate}</f:format.date></f:if>
         <br />
-        <f:if condition="{form.formState.formValues.experience-radio} == '0'">
-            <f:then>
-                <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:experience-radio.email.label"/>
-                <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:element.experience-radio.properties.options.Ja"/>
-            </f:then>
-            <f:else>
-                <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:experience-radio.email.label"/>
-                <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:element.experience-radio.properties.options.Nein"/>
-            </f:else>
-        </f:if>
-        <f:if condition="{form.formState.formValues.message}">
-            <br />
-            <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:form.confirmation.yourExperience"/>{form.formState.formValues.message}
+        <f:if condition="{form.formState.formValues.experience-radio}">
+            <f:if condition="{form.formState.formValues.experience-radio} == '0'">
+                <f:then>
+                    <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:experience-radio.email.label"/>
+                    <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:element.experience-radio.properties.options.0"/>
+                </f:then>
+                <f:else>
+                    <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:experience-radio.email.label"/>
+                    <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:element.experience-radio.properties.options.1"/>
+                </f:else>
+            </f:if>
+            <f:if condition="{form.formState.formValues.message}">
+                <br />
+                <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:form.confirmation.yourExperience"/>{form.formState.formValues.message}
+            </f:if>
         </f:if>
     </p>
 

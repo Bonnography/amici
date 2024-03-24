@@ -55,7 +55,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     }
     // mobile menu ends
-
     document.addEventListener('scroll', function () {
         let headerEl = document.querySelector(".header");
         let body = document.body;
@@ -73,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             headerScrollFunc(headerEl, body, scrollDown, scrollUp);
         }
     });
+
     function headerScrollFunc(headerEl, body, scrollDown, scrollUp) {
         if (document.body.scrollTop > scrollDown || document.documentElement.scrollTop > scrollUp) {
             headerEl.classList.add("header-small");
@@ -278,7 +278,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
     }
 
-    if (document.querySelector('.amici-registrationform').length) {
+    let registrationForm = document.querySelector('.amici-registrationform');
+    if (typeof (registrationForm) != 'undefined' && registrationForm != null) {
         let rdBtn = document.querySelector(".message-if-previous-experience-radio");
         let radios = rdBtn.querySelectorAll("input[type='radio']");
         let experienceMessage = document.querySelectorAll('.message-if-previous-experience');
@@ -300,9 +301,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 }
             });
         });
-
-
-
-
+    }
+    let privacy = document.querySelector('input.declaration');
+    if (typeof (privacy) != 'undefined' && privacy != null)
+    {
+        privacy.addEventListener('change', (event) => {
+            if (event.currentTarget.checked) {
+                console.log(privacy.checked);
+                privacy.closest(".input").classList.remove("invalid");
+            }
+        });
     }
 });

@@ -4,7 +4,7 @@ renderingOptions:
   useInvisibleRecaptcha: false
 type: Form
 identifier: amici-contactform
-label: amici-contaktform
+label: amici-contactform
 prototypeName: standard
 finishers:
   -
@@ -12,8 +12,9 @@ finishers:
       subject: 'Nachricht vom amici musicae Kontaktformular'
       recipients:
         info@codebomb-websolutions.de: 'amici musicae'
-      senderAddress: '{email-contact-form}'
-      senderName: '{firstname} {lastname-contact-form}'
+      senderAddress: 'noreply@amici-musicae.de'
+      senderName: 'amici musicae'
+      replyTo: '{email-contact-form}'
       addHtmlPart: true
       attachUploads: true
       translation:
@@ -66,6 +67,7 @@ renderables:
             label: Vorname
             properties:
               fluidAdditionalAttributes:
+                required: required
                 placeholder: Vorname
               gridColumnClassAutoConfiguration:
                 viewPorts:
@@ -73,6 +75,9 @@ renderables:
                     numbersOfColumnsToUse: '12'
                   sm:
                     numbersOfColumnsToUse: '12'
+            validators:
+              -
+                identifier: NotEmpty
           -
             defaultValue: ''
             type: Text

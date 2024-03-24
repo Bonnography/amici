@@ -64,7 +64,7 @@
                 <source>E-mail address</source>
             </trans-unit>
             <trans-unit id="footer.newsletterPrivacy">
-                <source>I would like to receive your newsletter and accept the <![CDATA[<a target="_blank" rel="noopener" href="https://amici.codebomb-websolutions.de/en/privacy">privacy policy</a>]]>.</source>
+                <source>I would like to receive your newsletter and accept the <![CDATA[<a target="_blank" rel="noopener" href="https://amici-musicae.de/en/privacy">privacy policy</a>]]>.</source>
             </trans-unit>
             <trans-unit id="languages.en">
                 <source>English</source>

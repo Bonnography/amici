@@ -84,7 +84,7 @@
                 <div class="{f:if(condition: '{layout} == \'related-news\'', then: 'col-md-7', else:'col-md-8')}">
                     <div class="news-informations">
                         <p class="news-date">
-                            <f:format.date format="d.m.Y">{news.data.crdate}</f:format.date>
+                            <f:format.date format="d.m.Y">{news.data.starttime}</f:format.date>
                         </p>
                         <f:if condition="{news.data.subtitle}">
                             <f:then>

@@ -22,7 +22,7 @@ class RelatedNewsViewHelper extends AbstractViewHelper
 
         foreach ($newsArray as $key => $news)
         {
-            $timestamps[$key] = $news['data']['crdate'];
+            $timestamps[$key] = $news['data']['starttime'];
         }
         array_multisort($timestamps, SORT_DESC, $newsArray);
 

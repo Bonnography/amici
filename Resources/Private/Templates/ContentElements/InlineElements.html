@@ -86,7 +86,7 @@
             <f:if condition="{inlineElement.images}">
                 <f:then>
                     <f:for each="{inlineElement.images}" as="image">
-                        <f:if condition="{image.link}">
+                        <f:if condition="{inlineElement.cta}">
                             <f:then>
                                 <f:link.typolink parameter="{inlineElement.cta}">
                                     <f:media
@@ -163,7 +163,7 @@
 </f:section>
 <f:section name="image">
     <f:for each="{inlineElement.images}" as="image">
-        <f:if condition="{image.link}">
+        <f:if condition="{inlineElement.cta}">
             <f:then>
                 <f:link.typolink parameter="{inlineElement.cta}">
                     <f:media

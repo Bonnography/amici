@@ -344,12 +344,12 @@ input:-moz-placeholder {
 .form-group {
   margin-bottom: 1rem;
 }
-.amici-contaktform {
+.amici-contactform {
   label.form-label {
     display: none;
   }
 }
-.amici-contaktform, .amici-registrationform, .loginform {
+.amici-contactform, .amici-registrationform, .loginform {
   padding: 40px 30px;
   box-shadow: 0 1px 8px rgba(0, 0, 0, .1), 0 4px 4px rgba(0, 0, 0, .05);
   margin-bottom: 30px;
@@ -463,11 +463,34 @@ input:-moz-placeholder {
         }
       }
     }
+    &.checkbox {
+      &.invalid {
+        p {
+          color: red;
+          a {
+            color: red;
+          }
+        }
+        .invalid-feedback {
+          display: block;
+        }
+      }
+    }
+  }
+  .recaptcha {
+    &.invalid {
+      iframe {
+        border: 2px solid red;
+      }
+      .invalid-feedback {
+        display: block;
+      }
+    }
   }
 
 }
 @include media-breakpoint-up(md) {
-  .amici-contaktform, .amici-registrationform {
+  .amici-contactform, .amici-registrationform {
     .input {
       &.checkbox {
         width: 75%;
@@ -478,7 +501,7 @@ input:-moz-placeholder {
 }
 
 @include media-breakpoint-up(lg) {
-  .amici-contaktform, .amici-registrationform {
+  .amici-contactform, .amici-registrationform {
     .input {
       textarea.form-control {
         min-height: 150px;
