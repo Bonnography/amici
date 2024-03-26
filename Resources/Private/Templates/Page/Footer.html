@@ -88,12 +88,21 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div style="padding: 8px 0;">
+                                            <f:if condition="{data.sys_language_uid} == '0'">
+                                                <f:then>
+                                                    <f:variable name="language" value="de" />
+                                                </f:then>
+                                                <f:else>
+                                                    <f:variable name="language" value="en" />
+                                                </f:else>
+                                            </f:if>
+
+                                            <div>
                                                 <div class="g-recaptcha" data-sitekey="6Lf9U-smAAAAAJiSuBFiQLxsyo6KKW0FnJFsP-XG" data-callback="invisibleCaptchaCallback" data-size="invisible" onclick="executeCaptcha"></div>
                                             </div>
 
                                             <input type="text" name="email_address_check" value="" class="input--hidden">
-                                            <input type="hidden" name="locale" value="de">
+                                            <input type="hidden" name="locale" value="{language}">
                                         </form>
                                     </div>
                                 </div>
@@ -121,18 +130,14 @@
                 </div>
             </div>
         </section>
-        <!-- START - We recommend to place the below code in footer or bottom of your website html  -->
+
         <script>
-            window.REQUIRED_CODE_ERROR_MESSAGE = 'Wählen Sie bitte einen Ländervorwahl aus.';
             window.LOCALE = 'de';
-            window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "Die eingegebenen Informationen sind nicht gültig. Bitte überprüfen Sie Ihre Eingabe.";
+            window.EMAIL_INVALID_MESSAGE = "{f:translate(key: 'footer.newsLetter.EMAIL_INVALID_MESSAGE', extensionName: 'CbTemplate')}";
 
-            window.REQUIRED_ERROR_MESSAGE = "Dieses Feld darf nicht leer sein.";
+            window.REQUIRED_ERROR_MESSAGE = "{f:translate(key: 'footer.newsLetter.REQUIRED_ERROR_MESSAGE', extensionName: 'CbTemplate')}";
 
-            window.GENERIC_INVALID_MESSAGE = "Die eingegebenen Informationen sind nicht gültig. Bitte überprüfen Sie Ihre Eingabe.";
-
-
-
+            window.GENERIC_INVALID_MESSAGE = "{f:translate(key: 'footer.newsLetter.GENERIC_INVALID_MESSAGE', extensionName: 'CbTemplate')}";
 
             window.translation = {
                 common: {
@@ -143,9 +148,6 @@
 
             var AUTOHIDE = Boolean(0);
         </script>
-
-        <script src="https://www.google.com/recaptcha/api.js?hl=de" defer></script>
-
     </footer>
 </f:section>
 </html>

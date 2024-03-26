@@ -36,13 +36,17 @@
                     <div class="row">
                         <div class="col-md-4">
                             <f:if condition="{concert.concertImage}">
-                                <f:media
-                                        class="img-fluid"
-                                        file="{concert.concertImage}"
-                                        alt="{concert.concertImage.alternative}"
-                                        title="{concert.concertImage.title}"
-                                        additionalAttributes="{srcset: '{f:uri.image(image: concert.concertImage, maxWidth: 375)} 375w, {f:uri.image(image: concert.concertImage, maxWidth: 576)} 576w, {f:uri.image(image: concert.concertImage, maxWidth: 768)} 768w,{f:uri.image(image: concert.concertImage, maxWidth: 420)} 992w,{f:uri.image(image: concert.concertImage, maxWidth: 420)} 1200w',sizes: '(min-width: 1200px) 40vw, 100vw'}"
-                                />
+                                <picture>
+                                    <source
+                                            media="(max-width: 375px)"
+                                            srcset="{f:uri.image(image: concert.concertImage, maxWidth: 375)}"
+                                    />
+                                    <source
+                                            media="(min-width: 768px)"
+                                            srcset="{f:uri.image(image: concert.concertImage, maxWidth: 420)}"
+                                    />
+                                    <f:image image="{concert.concertImage}" class="img-fluid" loading="lazy" alt="{concert.concertImage.alternative}" title="{concert.concertImage.title}" />
+                                </picture>
                             </f:if>
                         </div>
                         <div class="col-md-8">

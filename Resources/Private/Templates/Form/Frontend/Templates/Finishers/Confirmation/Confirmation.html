@@ -1,5 +1,7 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers" data-namespace-typo3-fluid="true">
 <div id="{form.identifier}" class="mb-5">
+
+    <f:debug>{_all}</f:debug>
     <f:if condition="{form.label} == 'amici-contactform'">
         <h3><f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:form.confirmation.contactForm.header"/></h3>
         <p><f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:form.confirmation.contactForm.data"/></p>
@@ -31,7 +33,7 @@
             </f:if>
             <f:if condition="{form.formState.formValues.message}">
                 <br />
-                <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:form.confirmation.yourExperience"/>{form.formState.formValues.message}
+                <p><strong><f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:form.confirmation.yourExperience"/></strong></p>{form.formState.formValues.message}
             </f:if>
         </f:if>
     </p>
@@ -39,7 +41,7 @@
 
     <f:if condition="{form.formState.formValues.message-contact-form}">
         <p><strong><f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:form.confirmation.yourMessage"/></strong></p>
-        <p>{form.formState.formValues.message-contact-form}</p>
+        <f:format.raw>{form.formState.formValues.message-contact-form}</f:format.raw>
     </f:if>
     <f:if condition="{form.formState.formValues.discover-multi-checkbox}">
         <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:element.discover-multi-checkbox.properties.label"/>:

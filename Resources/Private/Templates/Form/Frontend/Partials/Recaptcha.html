@@ -20,12 +20,14 @@
             </f:then>
             <f:else>
                 <f:render partial="Field/Field" arguments="{element: element, doNotShowLabel: element.renderingOptions.doNotShowLabel}" contentAs="elementContent">
+                    <div class="input">
                     <f:if condition="{showCaptcha}">
                         <f:then>
                             <f:form.hidden
                                 property="{element.identifier}"
                                 id="{element.uniqueIdentifier}"
                                 value=""
+                                class="hiddenRecaptcha"
                                 data="{recaptcha-form-field: ''}"
                                 additionalAttributes="{formvh:translateElementProperty(element: element, property: 'fluidAdditionalAttributes')}"
                                 respectSubmittedDataValue="false"
@@ -43,6 +45,8 @@
                             </div>
                         </f:else>
                     </f:if>
+                    </div>
+
                 </f:render>
             </f:else>
 	    </f:if>

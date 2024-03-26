@@ -5,20 +5,21 @@
         <f:if condition="{images}">
             <f:then>
                 <f:for each="{images}" as="image">
-                    <f:media
-                            class="img-fluid"
-                            file="{image}"
-                            width="{dimensions.width}"
-                            height="{dimensions.height}"
-                            alt="{image.alternative}"
-                            title="{image.title}"
-                            additionalAttributes="{srcset: '{f:uri.image(image: image, maxWidth: 768)} 768w,
-                                    {f:uri.image(image: image, maxWidth: 990)} 990w,
-                                    {f:uri.image(image: image, maxWidth: 1200)} 1200w,
-                                    {f:uri.image(image: image, maxWidth: 1440)} 1440w,
-                                    {f:uri.image(image: image, maxWidth: 1900)} 1900w',
-                           sizes: '(min-width: 1200px) 50vw, 100vw'}"
-                    />
+                    <picture>
+                        <source
+                                media="(max-width: 768px)"
+                                srcset="{f:uri.image(image: image, maxWidth: 1000)}"
+                        />
+                        <source
+                                media="(max-width: 1200px)"
+                                srcset="{f:uri.image(image: image, maxWidth: 1200)}"
+                        />
+                        <source
+                                media="(max-width: 1920px)"
+                                srcset="{f:uri.image(image: image, maxWidth: 1920)}"
+                        />
+                        <f:image image="{image}" class="img-fluid" loading="lazy" alt="{image.alternative}" title="{image.title}" />
+                    </picture>
                 </f:for>
             </f:then>
         </f:if>

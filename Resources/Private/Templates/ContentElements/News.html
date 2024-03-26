@@ -57,28 +57,59 @@
             </f:for>
             <div class="row">
                 <div class="{f:if(condition: '{layout} == \'related-news\'', then: 'col-md-5', else:'col-md-4')}">
-                    <f:for each="{imageArr}" as="image">
-                        <a href="{news.link}" title="{news.title}">
-                        <div class="news-image">
-                            <f:media
-                                    class="img-fluid "
-                                    file="{image}"
-                                    width="{dimensions.width}"
-                                    height="{dimensions.height}"
-                                    alt="{file.alternative}"
-                                    title="{file.title}"
-                                    loading="{settings.media.lazyLoading}"
-                                    additionalAttributes="{srcset: '
-                                    {f:uri.image(image: image, maxWidth: 375)} 375w,
-                                    {f:uri.image(image: image, maxWidth: 560)} 768w,
-                                    {f:uri.image(image: image, maxWidth: 375)} 990w,
-                                    {f:uri.image(image: image, maxWidth: 375)} 1200w,
-                                    {f:uri.image(image: image, maxWidth: 300)} 1440w,
-                                    {f:uri.image(image: image, maxWidth: 300)} 1900w',
-                           sizes: '(min-width: 1200px) 50vw, 100vw'}"
-                            />
-                        </div>
-                        </a>
+                    <f:for each="{imageArr}" as="image" iteration="i">
+                        <f:if condition="{layout} == 'related-news'">
+                            <f:then>
+                                <f:if condition="{i.isFirst}">
+                                    <a href="{news.link}" title="{news.title}">
+                                        <div class="news-image">
+                                            <picture>
+                                                <source
+                                                        media="(max-width: 375px)"
+                                                        srcset="{f:uri.image(image: image, maxWidth: 375)}"
+                                                />
+                                                <source
+                                                        media="(max-width: 768px)"
+                                                        srcset="{f:uri.image(image: image, maxWidth: 560)}"
+                                                />
+                                                <source
+                                                        media="(max-width: 1200px)"
+                                                        srcset="{f:uri.image(image: image, maxWidth: 140)}"
+                                                />
+                                                <source
+                                                        media="(min-width: 1201px)"
+                                                        srcset="{f:uri.image(image: image, maxWidth: 260)}"
+                                                />
+                                                <f:image image="{image}" class="img-fluid" loading="lazy" alt="{image.alternative}" title="{image.title}" />
+                                            </picture>
+                                        </div>
+                                    </a>
+                                </f:if>
+                            </f:then>
+                            <f:else>
+                                <div class="news-image">
+                                    <picture>
+                                        <source
+                                                media="(max-width: 375px)"
+                                                srcset="{f:uri.image(image: image, maxWidth: 375)}"
+                                        />
+                                        <source
+                                                media="(max-width: 768px)"
+                                                srcset="{f:uri.image(image: image, maxWidth: 540)}"
+                                        />
+                                        <source
+                                                media="(max-width: 1200px)"
+                                                srcset="{f:uri.image(image: image, maxWidth: 220)}"
+                                        />
+                                        <source
+                                                media="(min-width: 1201px)"
+                                                srcset="{f:uri.image(image: image, maxWidth: 420)}"
+                                        />
+                                        <f:image image="{image}" class="img-fluid" loading="lazy" alt="{image.alternative}" title="{image.title}" />
+                                    </picture>
+                                </div>
+                            </f:else>
+                        </f:if>
                     </f:for>
                 </div>
                 <div class="{f:if(condition: '{layout} == \'related-news\'', then: 'col-md-7', else:'col-md-8')}">

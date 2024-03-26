@@ -125,6 +125,7 @@ renderables:
               fluidAdditionalAttributes:
                 required: required
                 placeholder: 'E-Mail-Adresse*'
+                pattern: '.*@\w{2,}\.\w{2,}'
               gridColumnClassAutoConfiguration:
                 viewPorts:
                   xs:

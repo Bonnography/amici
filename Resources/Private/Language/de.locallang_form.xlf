@@ -157,7 +157,7 @@
               <target>Bitte ausfüllen</target>
           </trans-unit>
            <trans-unit id="form.validation.Date">
-              <target>Bitte ausfüllen</target>
+              <target>Bitte korrektes Datum wählen</target>
           </trans-unit>
            <trans-unit id="form.validation.SingleSelect">
               <target>Bitte auswählen</target>

@@ -87,6 +87,15 @@
             <trans-unit id="label.downloadButton">
                 <source>Download</source>
             </trans-unit>
+            <trans-unit id="footer.newsLetter.REQUIRED_ERROR_MESSAGE">
+                <source>This field must not be empty.</source>
+            </trans-unit>
+            <trans-unit id="footer.newsLetter.GENERIC_INVALID_MESSAGE">
+                <source>This field must not be empty.</source>
+            </trans-unit>
+            <trans-unit id="footer.newsLetter.EMAIL_INVALID_MESSAGE">
+                <source>The information you have entered is not valid. Please check your entry.</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

@@ -17003,7 +17003,7 @@ p:last-child
    margin-bottom: 40px;
 }
 
-.content.inlineElements:last-child .content-column-item
+.content.inlineElements .content-column-item__last
 {
    margin-bottom: 0;
 }
@@ -17015,7 +17015,17 @@ p:last-child
       margin-bottom: 0;
    }
 
-   .content-column-item
+   .content.inlineElements .content-column-item.margin-desktop
+   {
+      margin-bottom: 40px;
+   }
+
+   .content.inlineElements .content-column-item-2cols:nth-last-child(-n+2) .content-column-item.margin-desktop
+   {
+      margin-bottom: 0;
+   }
+
+   .content.inlineElements .content-column-item-3cols:nth-last-child(-n+3) .content-column-item.margin-desktop
    {
       margin-bottom: 0;
    }
