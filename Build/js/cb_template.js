@@ -306,7 +306,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if (typeof (privacy) != 'undefined' && privacy != null)
     {
         privacy.addEventListener('change', (event) => {
-            if (event.currentTarget.checked) {
+            if (event.currentTarget.checked && privacy.classList.contains("invalid")) {
                 privacy.closest(".input").classList.remove("invalid");
             }
         });
@@ -319,12 +319,14 @@ function myCallBack() {
     let recaptcha2;
     let recaptchaBox1 = document.getElementById('recaptcha-1');
     let recaptchaBox2 = document.getElementById('recaptcha-2');
-    if (typeof (recaptchaBox1) != 'undefined' && recaptchaBox1 != null)
-    {
-        recaptcha1 = grecaptcha.render(document.getElementById('recaptcha-1'), {
-            'sitekey' : '6Lf9U-smAAAAAJiSuBFiQLxsyo6KKW0FnJFsP-XG'
-        });
-    }
+    setTimeout(function () {
+        if (typeof (recaptchaBox1) != 'undefined' && recaptchaBox1 != null)
+        {
+            recaptcha1 = grecaptcha.render(document.getElementById('recaptcha-1'), {
+                'sitekey' : '6Lf9U-smAAAAAJiSuBFiQLxsyo6KKW0FnJFsP-XG'
+            });
+        }
+    }, 5000);
     if (typeof (recaptchaBox2) != 'undefined' && recaptchaBox2 != null)
     {
         recaptcha2 = grecaptcha.render(document.getElementById('recaptcha-2'), {

@@ -10,11 +10,11 @@
             <f:if condition="{data.image_zoom}">
                 <f:then>
                     <ce:link.clickEnlarge image="{file}" configuration="{settings.media.popup}">
-                        <f:render partial="Media/Rendering/Image" arguments="{file: file, dimensions: dimensions, settings: settings}" />
+                        <f:render partial="Media/Rendering/Image" arguments="{file: file, dimensions: dimensions, settings: settings, data: data}" />
                     </ce:link.clickEnlarge>
                 </f:then>
                 <f:else>
-                    <f:render partial="Media/Rendering/Image" arguments="{file: file, dimensions: dimensions, settings: settings}" />
+                    <f:render partial="Media/Rendering/Image" arguments="{file: file, dimensions: dimensions, settings: settings, data: data}" />
                 </f:else>
             </f:if>
         </f:else>

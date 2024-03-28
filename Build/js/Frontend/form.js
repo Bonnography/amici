@@ -20,6 +20,7 @@ class Recaptcha {
 
     visibleRecaptchaButtonClicked(event) {
         this.currentForm = event.target.closest('form');
+        console.log(grecaptcha.getResponse());
         if (!this.currentForm.checkValidity()) {
             let list = this.currentForm.querySelectorAll(':invalid');
 
