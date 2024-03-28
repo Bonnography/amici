@@ -335,18 +335,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 // Function to lazily load content
     function lazyLoadContent() {
-        const lazyContentElements = document.querySelectorAll(".lazy-content:not(:first-child)");
-        const lazyContentElementsFirst = document.querySelector(".lazy-content:first-child");
-        if (typeof (lazyContentElementsFirst) != 'undefined' && lazyContentElementsFirst != null) {
-            lazyContentElementsFirst.classList.remove("lazy-content");
-        }
+        const lazyContentElements = document.querySelectorAll(".lazy-content");
 
         lazyContentElements.forEach((element) => {
-            console.log(element);
             if (isElementVisible(element)) {
-                    // Add your logic to load the content for the element here
-                    element.classList.add("loaded");
-
+                // Add your logic to load the content for the element here
+                element.classList.add("loaded");
             }
         });
     }
