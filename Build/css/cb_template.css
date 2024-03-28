@@ -16123,7 +16123,7 @@ a:hover
 {
    opacity: 0;
    transition: opacity .3s, transform .3s ease-out;
-   transform: translateY(10px);
+   transform: translateY(20px);
 }
 
 .lazy-content.loaded
