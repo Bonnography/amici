@@ -34,7 +34,7 @@
     </div>
 </f:section>
 <f:section name="twoColumns">
-    <div class="row">
+    <div class="row lazy-content">
         <f:for each="{inlineElements}" as="inlineElement" iteration="i">
             <div class="col-12 col-md-6 content-column-item-2cols">
                 <div class="content-column-item{f:if(condition: '{i.total} > 1', then: ' margin-desktop')}{f:if(condition: '{i.isLast}', then: ' content-column-item__last')}">
@@ -45,7 +45,7 @@
     </div>
 </f:section>
 <f:section name="threeColumns">
-    <div class="row">
+    <div class="row lazy-content">
         <f:for each="{inlineElements}" as="inlineElement" iteration="i">
             <div class="col-12 col-md-4 content-column-item-3cols">
                 <div class="content-column-item{f:if(condition: '{i.total} > 2', then: ' margin-desktop')}{f:if(condition: '{i.isLast}', then: ' content-column-item__last')}">

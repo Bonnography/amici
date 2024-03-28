@@ -60,7 +60,7 @@
 <f:section name="bodytext">
     <f:if condition="{data.bodytext}">
         <f:then>
-            <div class="ce-bodytext {f:if(condition:'{data.text_vertical_center}', then: 'vertical-center', else: '')}">
+            <div class="ce-bodytext lazy-content{f:if(condition:'{data.text_vertical_center}', then: ' vertical-center')}">
                 <f:if condition="{data.header}">
                     <f:render section="Header" optional="true">
                         <f:render partial="Header/All" arguments="{_all}" />

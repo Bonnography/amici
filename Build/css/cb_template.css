@@ -16119,6 +16119,19 @@ a:hover
    }
 }
 
+.lazy-content
+{
+   opacity: 0;
+   transition: opacity .3s, transform .3s ease-out;
+   transform: translateY(10px);
+}
+
+.lazy-content.loaded
+{
+   opacity: 1;
+   transform: translateY(0);
+}
+
 /*
 * === _base Part 2 ===
 */
