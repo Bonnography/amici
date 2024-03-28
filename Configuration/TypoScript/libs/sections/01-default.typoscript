@@ -15,7 +15,7 @@ page {
     includeJSFooter {
         default = EXT:cb_template/Resources/Public/js/default-libs.min.js
         cbtemplate = EXT:cb_template/Resources/Public/js/cb_template.min.js
-        recaptcha = https://www.google.com/recaptcha/api.js?hl=de
+        recaptcha = https://www.google.com/recaptcha/api.js?onload=myCallBack&render=explicit&hl=de
         recaptcha.external = 1
         recaptcha.defer = 1
     }

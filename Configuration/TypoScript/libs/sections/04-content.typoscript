@@ -28,10 +28,8 @@ lib.section-content {
             content {
                 select.where = colPos=5
             }
-            contentBl < styles.content.get
-            contentBl {
-                select.where = colPos=10
-            }
+            newsListPid = TEXT
+            newsListPid.value = {$page.newsListViewPid}
         }
         templateName.stdWrap.cObject = CASE
         templateName.stdWrap.cObject {
@@ -40,11 +38,8 @@ lib.section-content {
             default = TEXT
             default.value = Default
 
-            pagets__homepage = TEXT
-            pagets__homepage.value = Homepage
-
-            pagets__error = TEXT
-            pagets__error.value = Error
+            pagets__news = TEXT
+            pagets__news.value = News
         }
     }
 }

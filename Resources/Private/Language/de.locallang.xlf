@@ -12,6 +12,9 @@
             <trans-unit id="news.moreInformation">
                 <target>Mehr erfahren</target>
             </trans-unit>
+            <trans-unit id="news.backlink">
+                <target>Zurück zur News Übersicht</target>
+            </trans-unit>
             <trans-unit id="concerts.date">
                 <target>Datum: </target>
             </trans-unit>

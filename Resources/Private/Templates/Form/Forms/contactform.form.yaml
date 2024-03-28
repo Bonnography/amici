@@ -68,7 +68,7 @@ renderables:
             properties:
               fluidAdditionalAttributes:
                 required: required
-                placeholder: Vorname
+                placeholder: Vorname*
               gridColumnClassAutoConfiguration:
                 viewPorts:
                   xs:

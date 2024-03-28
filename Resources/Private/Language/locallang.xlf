@@ -12,6 +12,9 @@
             <trans-unit id="news.moreInformation">
                 <source>Read more</source>
             </trans-unit>
+            <trans-unit id="news.backlink">
+                <source>Back to the news overview</source>
+            </trans-unit>
             <trans-unit id="concerts.date">
                 <source>Date: </source>
             </trans-unit>

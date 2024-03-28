@@ -87,27 +87,29 @@
                                 </f:if>
                             </f:then>
                             <f:else>
-                                <div class="news-image">
-                                    <picture>
-                                        <source
-                                                media="(max-width: 375px)"
-                                                srcset="{f:uri.image(image: image, maxWidth: 375)}"
-                                        />
-                                        <source
-                                                media="(max-width: 768px)"
-                                                srcset="{f:uri.image(image: image, maxWidth: 540)}"
-                                        />
-                                        <source
-                                                media="(max-width: 1200px)"
-                                                srcset="{f:uri.image(image: image, maxWidth: 220)}"
-                                        />
-                                        <source
-                                                media="(min-width: 1201px)"
-                                                srcset="{f:uri.image(image: image, maxWidth: 420)}"
-                                        />
-                                        <f:image image="{image}" class="img-fluid" loading="lazy" alt="{image.alternative}" title="{image.title}" />
-                                    </picture>
-                                </div>
+                                <f:if condition="{i.isFirst}">
+                                    <div class="news-image">
+                                        <picture>
+                                            <source
+                                                    media="(max-width: 375px)"
+                                                    srcset="{f:uri.image(image: image, maxWidth: 375)}"
+                                            />
+                                            <source
+                                                    media="(max-width: 768px)"
+                                                    srcset="{f:uri.image(image: image, maxWidth: 540)}"
+                                            />
+                                            <source
+                                                    media="(max-width: 1200px)"
+                                                    srcset="{f:uri.image(image: image, maxWidth: 220)}"
+                                            />
+                                            <source
+                                                    media="(min-width: 1201px)"
+                                                    srcset="{f:uri.image(image: image, maxWidth: 420)}"
+                                            />
+                                            <f:image image="{image}" class="img-fluid" loading="lazy" alt="{image.alternative}" title="{image.title}" />
+                                        </picture>
+                                    </div>
+                                </f:if>
                             </f:else>
                         </f:if>
                     </f:for>

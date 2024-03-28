@@ -1,9 +1,17 @@
+.news-backlink {
+  margin-top: 25px;
+}
 .news-showmore {
   margin-top: 30px;
 }
 
 .news-image {
   text-align: center;
+}
+.news-detail:first-child {
+  .content {
+    padding-top: 25px;
+  }
 }
 
 .content.news {
