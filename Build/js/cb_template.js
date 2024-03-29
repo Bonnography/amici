@@ -312,7 +312,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
     }
     // Function to check if an element is in the viewport
-    function isElementVisible(el) {
+   /* function isElementVisible(el) {
         let rect     = el.getBoundingClientRect(),
             vWidth   = window.innerWidth || document.documentElement.clientWidth,
             vHeight  = window.innerHeight || document.documentElement.clientHeight,
@@ -347,7 +347,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 // Attach the lazyLoadContent function to the scroll event
     window.addEventListener("scroll", lazyLoadContent);
 // Call the function initially to load the visible content on page load
-    lazyLoadContent();
+    lazyLoadContent();*/
 });
 
 
