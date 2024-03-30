@@ -306,7 +306,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if (typeof (privacy) != 'undefined' && privacy != null)
     {
         privacy.addEventListener('change', (event) => {
-            if (event.currentTarget.checked && privacy.classList.contains("invalid")) {
+            if (privacy.closest('.input').classList.contains("invalid")) {
                 privacy.closest(".input").classList.remove("invalid");
             }
         });

@@ -18,6 +18,7 @@ page {
         recaptcha = https://www.google.com/recaptcha/api.js?onload=myCallBack&render=explicit&hl=de
         recaptcha.external = 1
         recaptcha.defer = 1
+        recaptcha.async = 1
     }
 
 

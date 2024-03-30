@@ -20,26 +20,21 @@ class Recaptcha {
 
     visibleRecaptchaButtonClicked(event) {
         this.currentForm = event.target.closest('form');
-        console.log(grecaptcha.getResponse());
+        //console.log(grecaptcha.getResponse());
         if (!this.currentForm.checkValidity()) {
             let list = this.currentForm.querySelectorAll(':invalid');
 
+            let recaptchaVal = this.currentForm.querySelector('.hiddenRecaptcha').value;
+            if (recaptchaVal === '') {
+                this.currentForm.querySelector('.hiddenRecaptcha').closest('.recaptcha').classList.add("invalid");
+            }
             for (let item of list) {
                 item.closest(".input").classList.add("invalid");
-            }
-            if (grecaptcha.getResponse() == '') {
-                this.currentForm.querySelector('.hiddenRecaptcha').closest('.recaptcha').classList.add("invalid");
             }
             event.preventDefault();
             event.stopPropagation();
         } else {
-            if (grecaptcha.getResponse() == '') {
-                this.currentForm.querySelector('.hiddenRecaptcha').closest('.recaptcha').classList.add("invalid");
-                event.preventDefault();
-                event.stopPropagation();
-            } else {
-                event.target.closest('form').submit();
-            }
+            event.target.closest('form').submit();
         }
 
         this.currentForm.classList.add('was-validated');
@@ -82,7 +77,7 @@ class Recaptcha {
     recaptchaConfirmed(recaptchaResponse) {
         document.querySelector('[data-recaptcha-form-field]').value = recaptchaResponse;
         let recaptchaSelector = document.querySelector('.recaptcha');
-        console.log(recaptchaSelector);
+        //console.log(recaptchaSelector);
         if (recaptchaSelector.classList.contains('invalid')) {
             recaptchaSelector.classList.remove('invalid');
         }
