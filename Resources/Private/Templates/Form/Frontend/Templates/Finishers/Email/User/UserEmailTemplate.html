@@ -8,10 +8,21 @@
 </head>
 <body>
 <p>
-    Vielen Dank, dass du mit uns Kontakt aufgenommen haben. Wir werden uns so schnell wie möglich bei dir melden.
-    <br />
-    Anbei deine übermittelten Daten:
+    <f:if condition="{form.label} == 'amici-contactform'">
+        Hallo {form.formState.formValues.firstname} {form.formState.formValues.lastname},
+        <br />
+        vielen Dank, dass Sie mit uns Kontakt aufgenommen haben. Wir werden uns so bald wie möglich bei Ihnen zurückmelden.
+        <br />
+        Hier sehen sie noch einmal die von Ihnen übermittelten Daten:
 
+    </f:if>
+    <f:if condition="{form.label} == 'amici-registrationform'">
+        Hallo {form.formState.formValues.firstname} {form.formState.formValues.lastname},
+        <br />
+        wir freuen uns über Dein Interesse, Teil unseres Ensembles zu werden. Wir werden uns so schnell wie möglich bei Dir melden.
+        <br />
+        Hier siehst Du noch einmal Deine an uns übermittelten Daten:
+    </f:if>
 </p>
 <div class="confirmation_contact">
 
@@ -66,8 +77,14 @@
 
 </div>
 <p>
-    Freundliche Grüße<br/>
-    amici musicae
+    <f:if condition="{form.label} == 'amici-contactform'">
+        Viele Grüße und bis bald zur Probe <br />
+        Deine »amici musicae«
+    </f:if>
+    <f:if condition="{form.label} == 'amici-registrationform'">
+        Mit freundlichen Grüßen <br />
+        Ihre »amici musicae«
+    </f:if>
 </p>
 
 

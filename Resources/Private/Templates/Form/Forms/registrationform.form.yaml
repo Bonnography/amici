@@ -8,9 +8,10 @@ prototypeName: standard
 finishers:
   -
     options:
-      subject: 'Nachricht vom amici musicae Registrierungsformular'
+      subject: 'Neue Anmeldung bei amici'
       recipients:
-        info@codebomb-websolutions.de: 'amici musicae'
+        info@codebomb-websolutions.de: 'amici musicae, Leipzig'
+        #vorstand@amici-musicae.de: 'amici musicae, Leipzig'
       senderAddress: 'noreply@amici-musicae.de'
       senderName: 'amici musciae'
       replyTo: '{email}'
@@ -25,10 +26,11 @@ finishers:
       carbonCopyRecipients:
         heiko.paulick@gmail.com: 'Heiko Paulick'
         felix.lingath@amici-musicae.de: 'Felix Lingath'
+        #katidebes@googlemail.com: 'Kati Debes'
     identifier: EmailToReceiver
   -
     options:
-      subject: 'Registrierung über das amici musicae Registrierungsformular'
+      subject: 'Deine Anmeldung bei den »amici musicae«'
       recipients:
         '{email}': '{firstname} {lastname}'
       senderAddress: noreply@amici-musicae.de

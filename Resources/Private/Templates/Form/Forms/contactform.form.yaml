@@ -11,7 +11,8 @@ finishers:
     options:
       subject: 'Nachricht vom amici musicae Kontaktformular'
       recipients:
-        info@codebomb-websolutions.de: 'amici musicae'
+        info@codebomb-websolutions.de: 'amici musicae, Leipzig'
+        #vorstand@amici-musicae.de: 'amici musicae, Leipzig'
       senderAddress: 'noreply@amici-musicae.de'
       senderName: 'amici musicae'
       replyTo: '{email-contact-form}'
@@ -29,7 +30,7 @@ finishers:
     identifier: EmailToReceiver
   -
     options:
-      subject: 'Anfrage über das amici musicae Kontaktformular'
+      subject: 'Ihre Anfrage an die »amici musicae«'
       recipients:
         '{email-contact-form}': '{firstname} {lastname-contact-form}'
       senderAddress: noreply@amici-musicae.de
