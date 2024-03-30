@@ -20,7 +20,9 @@
     <f:if condition="{form.label} == 'amici-registrationform'">
         Hallo {form.formState.formValues.firstname} {form.formState.formValues.lastname},
         <br />
+        <br />
         wir freuen uns über Dein Interesse, Teil unseres Ensembles zu werden. Wir werden uns so schnell wie möglich bei Dir melden.
+        <br />
         <br />
         Hier siehst Du noch einmal Deine an uns übermittelten Daten:
     </f:if>
@@ -44,12 +46,11 @@
                 <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:experience-radio.email.label"/>
                 <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:element.experience-radio.properties.options.0"/>
             </f:else>
-            <f:if condition="{form.formState.formValues.message}">
-                <br />
-                <p><strong><f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:form.confirmation.yourExperience"/></strong></p>{form.formState.formValues.message}
-            </f:if>
         </f:if>
-
+        <f:if condition="{form.formState.formValues.message}">
+            <br />
+            <p><strong><f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:form.confirmation.yourExperience"/></strong></p>{form.formState.formValues.message}
+        </f:if>
     </p>
 
     <f:if condition="{form.formState.formValues.message-contact-form}">

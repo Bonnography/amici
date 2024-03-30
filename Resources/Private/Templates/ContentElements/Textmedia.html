@@ -25,7 +25,7 @@
                         </f:render>
                     </f:if>
                     <f:if condition="{data.bodytext}">
-                        <div class="ce-bodytext{f:if(condition:'{data.text_vertical_center}', then: ' vertical-center', else: '')} mb-3">
+                        <div class="ce-bodytext mb-3 {f:if(condition:'{data.text_vertical_center}', then: 'vertical-center', else: '')}">
                             <f:format.html parseFuncTSPath="lib.parseFunc_RTE"><f:spaceless>{data.bodytext}</f:spaceless></f:format.html>
                         </div>
                     </f:if>
@@ -60,7 +60,7 @@
 <f:section name="bodytext">
     <f:if condition="{data.bodytext}">
         <f:then>
-            <div class="ce-bodytext{f:if(condition:'{data.text_vertical_center}', then: ' vertical-center')}">
+            <div class="ce-bodytext {f:if(condition:'{data.text_vertical_center}', then: 'vertical-center', else: '')}">
                 <f:if condition="{data.header}">
                     <f:render section="Header" optional="true">
                         <f:render partial="Header/All" arguments="{_all}" />
