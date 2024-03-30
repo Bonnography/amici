@@ -9,12 +9,13 @@
 <body>
 <p>
     <f:if condition="{form.label} == 'amici-contactform'">
-        Hallo {form.formState.formValues.firstname} {form.formState.formValues.lastname},
+        Hallo {form.formState.formValues.firstname} {form.formState.formValues.lastname-contact-form},
+        <br />
         <br />
         vielen Dank, dass Sie mit uns Kontakt aufgenommen haben. Wir werden uns so bald wie möglich bei Ihnen zurückmelden.
         <br />
+        <br />
         Hier sehen sie noch einmal die von Ihnen übermittelten Daten:
-
     </f:if>
     <f:if condition="{form.label} == 'amici-registrationform'">
         Hallo {form.formState.formValues.firstname} {form.formState.formValues.lastname},
