@@ -25,7 +25,7 @@
                         </f:render>
                     </f:if>
                     <f:if condition="{data.bodytext}">
-                        <div class="ce-bodytext {f:if(condition:'{data.text_vertical_center}', then: 'vertical-center', else: '')}">
+                        <div class="ce-bodytext{f:if(condition:'{data.text_vertical_center}', then: ' vertical-center', else: '')} mb-3">
                             <f:format.html parseFuncTSPath="lib.parseFunc_RTE"><f:spaceless>{data.bodytext}</f:spaceless></f:format.html>
                         </div>
                     </f:if>
