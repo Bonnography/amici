@@ -11,8 +11,8 @@ finishers:
     options:
       subject: 'Nachricht vom amici musicae Kontaktformular'
       recipients:
-        info@codebomb-websolutions.de: 'amici musicae, Leipzig'
-        #vorstand@amici-musicae.de: 'amici musicae, Leipzig'
+        #info@codebomb-websolutions.de: 'amici musicae, Leipzig'
+        vorstand@amici-musicae.de: 'amici musicae, Leipzig'
       senderAddress: 'noreply@amici-musicae.de'
       senderName: 'amici musicae'
       replyTo: '{email-contact-form}'
@@ -24,9 +24,6 @@ finishers:
       templateName: AdminEmailTemplate
       templateRootPaths:
         20: 'EXT:cb_template/Resources/Private/Templates/Form/Frontend/Templates/Finishers/Email/Admin/'
-      carbonCopyRecipients:
-        heiko.paulick@gmail.com: 'Heiko Paulick'
-        felix.lingath@amici-musicae.de: 'Felix Lingath'
     identifier: EmailToReceiver
   -
     options:

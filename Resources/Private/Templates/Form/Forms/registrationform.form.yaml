@@ -10,8 +10,8 @@ finishers:
     options:
       subject: 'Neue Anmeldung bei amici'
       recipients:
-        info@codebomb-websolutions.de: 'amici musicae, Leipzig'
-        #vorstand@amici-musicae.de: 'amici musicae, Leipzig'
+        #info@codebomb-websolutions.de: 'amici musicae, Leipzig'
+        vorstand@amici-musicae.de: 'amici musicae, Leipzig'
       senderAddress: 'noreply@amici-musicae.de'
       senderName: 'amici musciae'
       replyTo: '{email}'
@@ -24,9 +24,9 @@ finishers:
       templateRootPaths:
         20: 'EXT:cb_template/Resources/Private/Templates/Form/Frontend/Templates/Finishers/Email/Admin/'
       carbonCopyRecipients:
-        heiko.paulick@gmail.com: 'Heiko Paulick'
-        felix.lingath@amici-musicae.de: 'Felix Lingath'
-        #katidebes@googlemail.com: 'Kati Debes'
+        #heiko.paulick@gmail.com: 'Heiko Paulick'
+        #felix.lingath@amici-musicae.de: 'Felix Lingath'
+        katidebes@googlemail.com: 'Kati Debes'
     identifier: EmailToReceiver
   -
     options:
