@@ -49,7 +49,8 @@
         </f:if>
         <f:if condition="{form.formState.formValues.message}">
             <br />
-            <p><strong><f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:form.confirmation.yourExperience"/></strong></p>{form.formState.formValues.message}
+            <p><strong><f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:form.confirmation.yourExperience"/></strong></p>
+            <p><f:format.nl2br>{form.formState.formValues.message}</f:format.nl2br></p>
         </f:if>
     </p>
 
