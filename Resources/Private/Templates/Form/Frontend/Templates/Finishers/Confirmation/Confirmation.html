@@ -28,12 +28,11 @@
                 <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:experience-radio.email.label"/>
                 <f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:element.experience-radio.properties.options.0"/>
             </f:else>
+            <f:if condition="{form.formState.formValues.message}">
+                <br />
+                <p><strong><f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:form.confirmation.yourExperience"/></strong></p>{form.formState.formValues.message}
+            </f:if>
         </f:if>
-        <f:if condition="{form.formState.formValues.message}">
-            <br />
-            <p><strong><f:translate key="LLL:EXT:cb_template/Resources/Private/Language/locallang_form.xlf:form.confirmation.yourExperience"/></strong></p>{form.formState.formValues.message}
-        </f:if>
-
     </p>
 
 
